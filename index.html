@@ -87,6 +87,13 @@ header {
   line-height: 1;
 }
 
+.cv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
 .social .cv-link {
   border: 1px solid var(--accent);
   padding: 0 1rem;
@@ -225,11 +232,6 @@ h2 {
   color: var(--accent);
 }
 
-.role {
-  font-size: 1rem;
-  color: var(--sub);
-}
-
 .desc {
   font-size: 1.05rem;
   color: var(--text);
@@ -258,6 +260,24 @@ h2 {
   .card img {
     height: 200px;
   }
+
+.role {
+  font-size: 1rem;
+  color: var(--sub);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-size {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+
 }
 
 </style>
@@ -277,9 +297,11 @@ h2 {
   <a href="https://www.linkedin.com/in/duhanayan" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
     <i class="social-icon fab fa-linkedin"></i>
   </a>
-  <a href="/resume.pdf" aria-label="Özgeçmiş" class="cv-link" data-i18n="resume" target="_blank" rel="noopener noreferrer">
-    Özgeçmiş <i class="fas fa-arrow-down" style="margin-left: 0.4rem; font-size: 1.05rem;"></i>
-  </a>
+  <a href="/ozgecmis.pdf" class="cv-link">
+  <span data-i18n="resume">Özgeçmiş</span>
+  <i class="fas fa-arrow-down" ...></i>
+</a>
+
 <div class="language-select">
   <select aria-label="Dil seçimi">
     <option value="tr">TR</option>
@@ -318,8 +340,13 @@ h2 {
           <div class="title-row">
             <h3>Space Shooter</h3>
             <span class="arrow">&rarr;</span>
-          </div>
-          <div class="role">Game Programmer</div>
+		</div>
+		<div class="role">
+		  <span class="team-size">
+			<i class="fas fa-users"></i> 3
+		  </span>
+		  Game Programmer
+		</div>
           <p class="desc" data-i18n="desc1">SDL2 ile geliştirilen arcade shooter. ECS mimarisi, procedural arka planlar ve temel yapay zekâ.</p>
         </div>
       </a>
@@ -331,8 +358,14 @@ h2 {
           <div class="title-row">
             <h3>Platformer</h3>
             <span class="arrow">&rarr;</span>
-          </div>
-          <div class="role">Game Programmer</div>
+		</div>
+		<div class="role">
+			<span class="team-size">
+				<i class="fas fa-users"></i> 3
+			</span>
+			Game Programmer
+		</div>
+
           <p class="desc" data-i18n="desc2">Unity ile geliştirilen 2D platform oyunu. Özel fizik sistemi, shader efektleri ve araç zinciri.</p>
         </div>
       </a>
@@ -344,8 +377,14 @@ h2 {
           <div class="title-row">
             <h3>Multiplayer Arena</h3>
             <span class="arrow">&rarr;</span>
-          </div>
-          <div class="role">Game Programmer</div>
+		</div>
+		<div class="role">
+			<span class="team-size">
+				<i class="fas fa-users"></i> 3
+			</span>
+			Game Programmer
+		</div>
+
           <p class="desc" data-i18n="desc3">Unreal Engine tabanlı çok oyunculu arena. Gameplay Ability System ve gerçek zamanlı ağ senkronizasyonu.</p>
         </div>
       </a>
