@@ -1,7 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stack Clone | Unity Mobil Oyun</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clr-primary:#ff5f6d;
+  --clr-secondary:#ffc371;
+  --clr-dark:#1e1e1e;
+  --clr-light:#f5f5f5;
+  --radius:12px;
+}
+#stack-portfolio *{box-sizing:border-box;}
+#stack-portfolio{
+  font-family:'Poppins',sans-serif;
+  background:var(--clr-dark);
+  color:var(--clr-light);
+  line-height:1.6;
+  padding:2rem 1rem;
+}
+#stack-portfolio a{color:var(--clr-secondary);text-decoration:none;}
+#stack-portfolio img{max-width:100%;border-radius:var(--radius);} 
+#stack-portfolio .container{width:90%;max-width:1000px;margin:auto;padding:2rem 0;}
+/* Hero */
+#stack-portfolio .hero{
+  background:linear-gradient(135deg,var(--clr-primary),var(--clr-secondary));
+  text-align:center;
+  padding:6rem 1rem 5rem;
+  border-bottom-left-radius:var(--radius);
+  border-bottom-right-radius:var(--radius);
+  box-shadow:0 4px 15px rgba(0,0,0,.4);
+}
+#stack-portfolio .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;margin-bottom:.5rem;}
+#stack-portfolio .hero p{font-size:clamp(1rem,2.5vw,1.3rem);} 
+/* Section */
+#stack-portfolio section{margin-top:3rem;}
+#stack-portfolio section h2{
+  font-size:1.8rem;
+  margin-bottom:1rem;
+  color:var(--clr-secondary);
+  border-left:4px solid var(--clr-primary);
+  padding-left:.5rem;
+}
+#stack-portfolio .card-grid{
+  display:grid;
+  gap:1.2rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+#stack-portfolio .card{
+  background:#2a2a2a;
+  padding:1.2rem;
+  border-radius:var(--radius);
+  box-shadow:0 3px 10px rgba(0,0,0,.3);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+#stack-portfolio .card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 6px 15px rgba(0,0,0,.4);
+}
+#stack-portfolio .card h3{margin-bottom:.6rem;color:var(--clr-primary);}
+#stack-portfolio .card ul{list-style:disc;margin-left:1.1rem;}
+#stack-portfolio .gallery{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin-top: 2rem;
+}
+#stack-portfolio .cta{
+  text-align:center;
+  margin:2rem 0;
+}
+#stack-portfolio .btn{
+  display:inline-block;
+  background:var(--clr-primary);
+  color:var(--clr-light);
+  padding:.8rem 2rem;
+  border-radius:var(--radius);
+  font-weight:600;
+  transition:background .3s ease;
+}
+#stack-portfolio .btn:hover{background:var(--clr-secondary);color:var(--clr-dark);} 
+#stack-portfolio footer{font-size:.9rem;text-align:center;padding:2rem 0;color:#888;}
+@media(max-width:600px){
+  #stack-portfolio .hero{padding:4rem 1rem 3rem;}
+}
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  
+  <div id="stack-portfolio">
+
+<header class="hero">
+  <h1>Stack Clone</h1>
+  <p>Unity ile geliştirilen minimal ama zorlu bir mobil beceri oyunu</p>
+</header>
+
+<main class="container">
+  <section id="overview">
+    <h2>Oyun Hakkında</h2>
+    <p><strong>Stack</strong>, Ketchapp'in popüler mobil oyunlarından biridir. Bu proje, oyunun temel mekaniğini <em>sıfırdan</em> tasarlayarak kendi yorumumla yeniden inşa ettiğim bir <strong>clone</strong> çalışmasıdır. Amaç: teknik kabiliyetlerimi pekiştirmek ve performans odaklı sistem mimarisi inşa etmektir.</p>
+    
+    <div class="cta">
+      <a class="btn" href="https://github.com/kullaniciadi/stack-clone" target="_blank" rel="noopener">Kaynak Kod &nbsp;↗</a>
+    </div>
+
+    <h2>Şimdi Oynayın</h2>
+<div style="display: flex; justify-content: center; margin: 2rem 0;">
+  <iframe frameborder="0" src="https://itch.io/embed-upload/13785215?color=333333" allowfullscreen width="470" height="1000">
+    <a href="https://duhanayan.itch.io/juicy-merge">Play Juicy-Merge on itch.io</a>
+  </iframe>
+</div>
+
+    
+    <h2>Ekran Görüntüleri</h2>
+<div id="gallery" class="gallery" style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvTYrjvUk6E9T8H4GE5-uOiRBhzroHvCl4DaQ50ZPRlYc6FySoEfF4RZEYmPfT-RewqV2xKDzZNaHPkTrEbmL4B2SQPsZK1xBZT9v0gg7RKp6zEVtEe0DKqoWnwm_KIpwtzGyQHxJIk8MBsbtjlTmxilf4opwz8oQvpyYgIL5M3xr9r_qcP1m_BFJlwYdh/s320/Stacking_main_menu.PNG" alt="Stacking main menu">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_AweNmGz-2b2Z46W2lRw5vdwwEkDji7HTgA6kgagRKFbCeiMEbPeEYsEQD17cSJPvaWw2Q2FYiNAh3OMdL5EdR1iN4w_6ghEi5n-SvTt92i3kkg1XmYyox9HHlFyM-u_rEmF2Nz9RqQj5ARvnGG1LnfnEu3pnVh-O1i7OYz3iI5XBMODySGt0YY7ntmOF/s320/Stacking_in-game.PNG" alt="Stacking in-game">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY8n8Tn0bmDIW12HoquQC1ivAqU_1GlHafxwgGnajt03TaAcIbwtVh3nbopnmSZaNu7_dDSFkmODM2rysOpwV_Mx-jyiFRKPzTj4v4BFDyAF61T_2mvE-qC_4CcXshOOQk4K3nOZaf8X52ax1VtJ4WyNtPqqfPM30kpeR9NomWfQ0g__OqxoseO1udBrOy/s320/Stacking_game_over.PNG" alt="Stacking game over">
+</div>
+
+    
+  </section>
+
+  <section id="features">
+    <h2>Öne Çıkan Özellikler</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Performans</h3>
+        <ul>
+          <li>Object Pooling ile sıfıra yakın <code>Instantiate</code></li>
+          <li>Manuel bellek yönetimi (GarbageCollector)</li>
+          <li>Maksimum 60 FPS hedefi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Modüler Mimari</h3>
+        <ul>
+          <li>Singleton servis katmanı (Audio, UI, Score)</li>
+          <li>Olay tabanlı iletişim</li>
+          <li>Temiz ayrıştırılmış sorumluluklar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Görsel Dinamizm</h3>
+        <ul>
+          <li>Uyumlu background renk geçişleri</li>
+          <li>Slice bazlı kesme & animasyon</li>
+          <li>Sarsıntısız kamera takibi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Esnek Kod Yapısı</h3>
+        <ul>
+          <li>Yüksek okunabilirlik, <em>Clean Code</em> prensipleri</li>
+          <li>Extensibility için arayüzler</li>
+          <li>Unit test'e uygun metot tasarımı</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech">
+  <h2>Kullanılan Araçlar</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>DOTween</h3>
+      <p>Animasyon işlemleri (UI fade, hareket geçişleri, zamanlayıcılar) için kullanıldı. Performanslı tween işlemleri ile daha yumuşak bir kullanıcı deneyimi sağlandı.</p>
+    </div>
+
+    <div class="card">
+      <h3>Git</h3>
+      <p>Versiyon kontrolü ve proje yönetimi için Git kullanıldı. Feature-branch yapısıyla çalışıldı, kod bütünlüğü korundu.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="architecture">
+    <h2>Tasarım Desenleri & Mimari</h2>
+    <p>Projenin omurgasını; <strong>Singleton</strong> (servis yöneticileri), <strong>Object Pool</strong> (SlicePool), ve sınırlı <strong>Service Locator</strong> yapısı oluşturmaktadır. Bu sayede:</p>
+    <ul>
+      <li>GC baskısı minimuma indirilir.</li>
+      <li>Bileşenler arası gevşek bağlılık sağlanır.</li>
+      <li>Yeni özellik eklemek daha az refactor gerektirir.</li>
+    </ul>
+  </section>
+
+  <section id="challenges">
+    <h2>Karşılaşılan Zorluklar & Çözümler</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>FPS Düşüşleri</h3>
+        <p>Gerçek zamanlı kesme & düşen slice instantiate işlemleri FPS'i etkiliyordu. Object Pooling ile sahnede yeniden kullanım sağlanarak CPU spike'ları %70 azaltıldı.</p>
+      </div>
+      <div class="card">
+        <h3>Renk Senkronizasyonu</h3>
+        <p>Arka plan ve slice renklerinin uyumsuz geçişlerinden kaçınmak için <code>BackgroundColor</code> sınıfı HSV interpolasyonu kullanıyor.</p>
+      </div>
+      <div class="card">
+        <h3>Kamera Takibi</h3>
+        <p>Kamera <code>CameraController</code> scripti ile dinamik hedef yüksekliğine yumuşak geçiş animasyonu uygular, böylece 'snap' hissi ortadan kalkar.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 - Tüm hakları saklıdır. <br>
+  <a href="mailto:email@domain.com">email@domain.com</a> | <a href="https://www.linkedin.com/in/profiliniz/" target="_blank">LinkedIn</a>
+</footer>
+</div>
 </body>
 </html>
