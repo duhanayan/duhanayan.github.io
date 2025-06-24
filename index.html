@@ -1,133 +1,315 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stack Clone | Unity Mobil Oyun</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duhan Ayan – Game Programmer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101014;
+      --card-bg: #1b1c20;
+      --text: #e0e0e0;
+      --sub: #999999;
+      --accent: #a3bffa; /* alternatif pastel mavi - aksiyon */
+      --highlight: #ffd6a5; /* pastel sarı-turuncu - vurgu */
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid #2a2a2a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .header-left h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--highlight);
+    }
+
+    .header-left span {
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .social a {
+      margin-left: 1rem;
+      font-size: 1rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      background-color: var(--accent);
+      color: #101014;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .intro {
+      margin-bottom: 3rem;
+      font-size: 1.15rem;
+      color: var(--sub);
+      transition: opacity 0.4s ease;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: var(--highlight);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.4s ease;
+    }
+
+    .card-content {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title-row h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--highlight);
+      transition: color 0.3s ease;
+    }
+
+    .title-row .arrow {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .role {
+      font-size: 1rem;
+      color: var(--sub);
+    }
+
+    .desc {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+  @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .social {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .social a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-left h1 {
+    font-size: 2rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+</style>
 </head>
 <body>
-  
-  <div id="stack-portfolio">
+  <header>
+    <div class="header-left">
+      <h1>Duhan Ayan</h1>
+      <h3 data-i18n="profileTitle">Oyun Geliştiricisi</h3>
+    </div>
+    <div class="social">
+      <a href="#"><span style="margin-right: 0.5rem;">🔗</span>LinkedIn</a>
+      <a href="#"><span style="margin-right: 0.5rem;">💻</span>GitHub</a>
+      <a href="#" data-i18n="resume">Özgeçmiş</a>
+      <select style="margin-left: 1rem; background: var(--bg); color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0.4rem 0.8rem; height: 2.3rem;">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    </div>
+    </div>
+  </header>
 
-<header class="hero">
-  <h1>Stack Clone</h1>
-  <p>Unity ile geliştirilen minimal ama zorlu bir mobil beceri oyunu</p>
-</header>
+  <main>
+    <section class="profile" style="margin-bottom: 3rem;">
+      <h2 data-i18n="profile">Profil</h2>
+      
+      <p data-i18n="profileText" style="color: var(--sub); font-size: 1.1rem; max-width: 800px;">Tutkulu bir oyun geliştiricisi olarak, performansa odaklı, oynanabilirliği yüksek projeler üretmeyi hedefliyorum. Sistem seviyesinden kullanıcı arayüzüne kadar oyunların tüm katmanlarında deneyimliyim. Takım çalışmasına yatkın, sürekli öğrenmeye açık biri olarak projelere hem teknik hem yaratıcı katkılar sunuyorum.</p>
+    </section>
 
-<main class="container">
-  <section id="overview">
-    <h2>Oyun Hakkında</h2>
-    <p><strong>Stack</strong>, Ketchapp'in popüler mobil oyunlarından biridir. Bu proje, oyunun temel mekaniğini <em>sıfırdan</em> tasarlayarak kendi yorumumla yeniden inşa ettiğim bir <strong>clone</strong> çalışmasıdır. Amaç: teknik kabiliyetlerimi pekiştirmek ve performans odaklı sistem mimarisi inşa etmektir.</p>
-    
-    <div class="cta">
-      <a class="btn" href="https://github.com/kullaniciadi/stack-clone" target="_blank" rel="noopener">Kaynak Kod &nbsp;↗</a>
+    <h2 data-i18n="techExp">Teknik Yetenekler</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 3rem;">
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C</span>
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C++</span>
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C#</span>
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Unity</span>
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Qt</span>
+      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Git</span>
     </div>
 
-    <h2>Şimdi Oynayın</h2>
-<div style="display: flex; justify-content: center; margin: 2rem 0;">
-  <iframe frameborder="0" src="https://itch.io/embed-upload/13785215?color=333333" allowfullscreen width="470" height="1000">
-    <a href="https://duhanayan.itch.io/juicy-merge">Play Juicy-Merge on itch.io</a>
-  </iframe>
-</div>
+    <h2 data-i18n="gameProj">Oyun Projeleri</h2>
+    <div class="projects">
+      <!-- Project Card 1 -->
+      <a href="#" class="card">
+        <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Space Shooter GIF">
+        <div class="card-content">
+          <div class="title-row">
+            <h3>Space Shooter</h3>
+            <span class="arrow">&rarr;</span>
+          </div>
+          <div class="role">Game Programmer</div>
+          <p class="desc" data-i18n="desc1">SDL2 ile geliştirilen arcade shooter. ECS mimarisi, procedural arka planlar ve temel yapay zekâ.</p>
+        </div>
+      </a>
 
-    
-    <h2>Ekran Görüntüleri</h2>
-<div id="gallery" class="gallery" style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvTYrjvUk6E9T8H4GE5-uOiRBhzroHvCl4DaQ50ZPRlYc6FySoEfF4RZEYmPfT-RewqV2xKDzZNaHPkTrEbmL4B2SQPsZK1xBZT9v0gg7RKp6zEVtEe0DKqoWnwm_KIpwtzGyQHxJIk8MBsbtjlTmxilf4opwz8oQvpyYgIL5M3xr9r_qcP1m_BFJlwYdh/s320/Stacking_main_menu.PNG" alt="Stacking main menu">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_AweNmGz-2b2Z46W2lRw5vdwwEkDji7HTgA6kgagRKFbCeiMEbPeEYsEQD17cSJPvaWw2Q2FYiNAh3OMdL5EdR1iN4w_6ghEi5n-SvTt92i3kkg1XmYyox9HHlFyM-u_rEmF2Nz9RqQj5ARvnGG1LnfnEu3pnVh-O1i7OYz3iI5XBMODySGt0YY7ntmOF/s320/Stacking_in-game.PNG" alt="Stacking in-game">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY8n8Tn0bmDIW12HoquQC1ivAqU_1GlHafxwgGnajt03TaAcIbwtVh3nbopnmSZaNu7_dDSFkmODM2rysOpwV_Mx-jyiFRKPzTj4v4BFDyAF61T_2mvE-qC_4CcXshOOQk4K3nOZaf8X52ax1VtJ4WyNtPqqfPM30kpeR9NomWfQ0g__OqxoseO1udBrOy/s320/Stacking_game_over.PNG" alt="Stacking game over">
-</div>
+      <!-- Project Card 2 -->
+      <a href="#" class="card">
+        <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Platformer GIF">
+        <div class="card-content">
+          <div class="title-row">
+            <h3>Platformer</h3>
+            <span class="arrow">&rarr;</span>
+          </div>
+          <div class="role">Game Programmer</div>
+          <p class="desc" data-i18n="desc2">Unity ile geliştirilen 2D platform oyunu. Özel fizik sistemi, shader efektleri ve araç zinciri.</p>
+        </div>
+      </a>
 
-    
-  </section>
-
-  <section id="features">
-    <h2>Öne Çıkan Özellikler</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Performans</h3>
-        <ul>
-          <li>Object Pooling ile sıfıra yakın <code>Instantiate</code></li>
-          <li>Manuel bellek yönetimi (GarbageCollector)</li>
-          <li>Maksimum 60 FPS hedefi</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Modüler Mimari</h3>
-        <ul>
-          <li>Singleton servis katmanı (Audio, UI, Score)</li>
-          <li>Olay tabanlı iletişim</li>
-          <li>Temiz ayrıştırılmış sorumluluklar</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Görsel Dinamizm</h3>
-        <ul>
-          <li>Uyumlu background renk geçişleri</li>
-          <li>Slice bazlı kesme & animasyon</li>
-          <li>Sarsıntısız kamera takibi</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Esnek Kod Yapısı</h3>
-        <ul>
-          <li>Yüksek okunabilirlik, <em>Clean Code</em> prensipleri</li>
-          <li>Extensibility için arayüzler</li>
-          <li>Unit test'e uygun metot tasarımı</li>
-        </ul>
-      </div>
+      <!-- Project Card 3 -->
+      <a href="#" class="card">
+        <img src="https://media.giphy.com/media/jt7bAtEijhurm/giphy.gif" alt="Multiplayer Arena GIF">
+        <div class="card-content">
+          <div class="title-row">
+            <h3>Multiplayer Arena</h3>
+            <span class="arrow">&rarr;</span>
+          </div>
+          <div class="role">Game Programmer</div>
+          <p class="desc" data-i18n="desc3">Unreal Engine tabanlı çok oyunculu arena. Gameplay Ability System ve gerçek zamanlı ağ senkronizasyonu.</p>
+        </div>
+      </a>
     </div>
-  </section>
+  </main>
+<script>
+  const translations = {
+    en: {
+      resume: "Resume",
+      profileTitle: "Game Programmer",
+      profile: "Profile",
+      profileText: "As a passionate game developer, I aim to create performance-focused, highly playable projects. I have experience across all layers of games, from system-level to user interface. I enjoy contributing both technically and creatively, and I'm always eager to learn.",
+      techExp: "Technical Experience",
+      gameProj: "Game Projects",
+      desc1: "An arcade shooter built with SDL2. Features ECS architecture, procedural backgrounds, and basic AI.",
+      desc2: "A 2D platformer developed in Unity. Includes custom physics, shader effects, and toolchain.",
+      desc3: "Multiplayer arena built in Unreal Engine with Gameplay Ability System and real-time networking."
+    },
+    tr: {
+      resume: "Özgeçmiş",
+      profileTitle: "Oyun Geliştiricisi",
+      profile: "Profil",
+      profileText: "Tutkulu bir oyun geliştiricisi olarak, performansa odaklı, oynanabilirliği yüksek projeler üretmeyi hedefliyorum. Sistem seviyesinden kullanıcı arayüzüne kadar oyunların tüm katmanlarında deneyimliyim. Takım çalışmasına yatkın, sürekli öğrenmeye açık biri olarak projelere hem teknik hem yaratıcı katkılar sunuyorum.",
+      techExp: "Teknik Yetenekler",
+      gameProj: "Oyun Projeleri",
+      desc1: "SDL2 ile geliştirilen arcade shooter. ECS mimarisi, procedural arka planlar ve temel yapay zekâ.",
+      desc2: "Unity ile geliştirilen 2D platform oyunu. Özel fizik sistemi, shader efektleri ve araç zinciri.",
+      desc3: "Unreal Engine tabanlı çok oyunculu arena. Gameplay Ability System ve gerçek zamanlı ağ senkronizasyonu."
+    }
+  };
 
-  <section id="tech">
-  <h2>Kullanılan Araçlar</h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3>DOTween</h3>
-      <p>Animasyon işlemleri (UI fade, hareket geçişleri, zamanlayıcılar) için kullanıldı. Performanslı tween işlemleri ile daha yumuşak bir kullanıcı deneyimi sağlandı.</p>
-    </div>
-
-    <div class="card">
-      <h3>Git</h3>
-      <p>Versiyon kontrolü ve proje yönetimi için Git kullanıldı. Feature-branch yapısıyla çalışıldı, kod bütünlüğü korundu.</p>
-    </div>
-  </div>
-</section>
-
-  <section id="architecture">
-    <h2>Tasarım Desenleri & Mimari</h2>
-    <p>Projenin omurgasını; <strong>Singleton</strong> (servis yöneticileri), <strong>Object Pool</strong> (SlicePool), ve sınırlı <strong>Service Locator</strong> yapısı oluşturmaktadır. Bu sayede:</p>
-    <ul>
-      <li>GC baskısı minimuma indirilir.</li>
-      <li>Bileşenler arası gevşek bağlılık sağlanır.</li>
-      <li>Yeni özellik eklemek daha az refactor gerektirir.</li>
-    </ul>
-  </section>
-
-  <section id="challenges">
-    <h2>Karşılaşılan Zorluklar & Çözümler</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>FPS Düşüşleri</h3>
-        <p>Gerçek zamanlı kesme & düşen slice instantiate işlemleri FPS'i etkiliyordu. Object Pooling ile sahnede yeniden kullanım sağlanarak CPU spike'ları %70 azaltıldı.</p>
-      </div>
-      <div class="card">
-        <h3>Renk Senkronizasyonu</h3>
-        <p>Arka plan ve slice renklerinin uyumsuz geçişlerinden kaçınmak için <code>BackgroundColor</code> sınıfı HSV interpolasyonu kullanıyor.</p>
-      </div>
-      <div class="card">
-        <h3>Kamera Takibi</h3>
-        <p>Kamera <code>CameraController</code> scripti ile dinamik hedef yüksekliğine yumuşak geçiş animasyonu uygular, böylece 'snap' hissi ortadan kalkar.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2025 - Tüm hakları saklıdır. <br>
-  <a href="mailto:email@domain.com">email@domain.com</a> | <a href="https://www.linkedin.com/in/profiliniz/" target="_blank">LinkedIn</a>
-</footer>
-</div>
+  document.querySelector('select').addEventListener('change', function () {
+    const lang = this.value;
+    document.querySelector('[data-i18n="resume"]').textContent = translations[lang].resume;
+    document.querySelector('[data-i18n="profileTitle"]').textContent = translations[lang].profileTitle;
+    document.querySelector('[data-i18n="profile"]').textContent = translations[lang].profile;
+    document.querySelector('[data-i18n="profileText"]').textContent = translations[lang].profileText;
+    document.querySelector('[data-i18n="techExp"]').textContent = translations[lang].techExp;
+    document.querySelector('[data-i18n="gameProj"]').textContent = translations[lang].gameProj;
+    document.querySelector('[data-i18n="desc1"]').textContent = translations[lang].desc1;
+    document.querySelector('[data-i18n="desc2"]').textContent = translations[lang].desc2;
+    document.querySelector('[data-i18n="desc3"]').textContent = translations[lang].desc3;
+  });
+</script>
 </body>
 </html>
