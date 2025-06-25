@@ -91,11 +91,16 @@
           <div class="gallery-main">
             <div class="main-image-container" id="mainImageContainer">
               <img id="mainImage" src="../assets/images/stack/stack_inGame.PNG" alt="Stack Gameplay Video" style="display: none;">
-              <video id="mainVideo" loop autoplay muted>
-                <source src="../assets/images/stack/stack_gameplay.mov" type="video/quicktime">
+              <video id="mainVideo" loop>
                 <source src="../assets/images/stack/stack_gameplay.mp4" type="video/mp4">
                 <span data-i18n="videoNotSupported">Tarayıcınız video oynatmayı desteklemiyor.</span>
               </video>
+              <button class="mute-button" id="muteButton" style="display: none;">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button class="play-button hidden" id="playButton">
+                <i class="fas fa-play"></i>
+              </button>
               <div class="image-overlay">
                 <span id="mainCaption" data-i18n="gameplayVideo">Oynanış Videosu</span>
               </div>
@@ -104,8 +109,8 @@
           
           <!-- Thumbnail Gallery -->
           <div class="gallery-thumbnails">
-            <div class="thumbnail-item active" data-type="video" data-src="../assets/images/stack/stack_gameplay.mov" data-caption="gameplayVideo" data-poster="../assets/images/stack/stack_mainMenu.PNG">
-              <img src="../assets/images/stack/stack_mainMenu.PNG" alt="Stack Gameplay Video">
+            <div class="thumbnail-item active" data-type="video" data-src="../assets/images/stack/stack_gameplay.mp4" data-caption="gameplayVideo" data-poster="../assets/images/stack/stack_gameplay.gif">
+              <img src="../assets/images/stack/stack_gameplay.gif" alt="Stack Gameplay Video">
               <div class="thumbnail-overlay">
                 <i class="fas fa-play"></i>
               </div>
@@ -190,8 +195,34 @@
       const mainVideo = document.getElementById('mainVideo');
       const mainCaption = document.getElementById('mainCaption');
       const thumbnails = document.querySelectorAll('.thumbnail-item');
+      const muteButton = document.getElementById('muteButton');
+      const playButton = document.getElementById('playButton');
+      const mainImageContainer = document.getElementById('mainImageContainer');
       
       let currentMediaType = 'image';
+      
+      // Load mute state from localStorage
+      const savedMuteState = localStorage.getItem('videoMuted');
+      if (savedMuteState === 'true') {
+        mainVideo.muted = true;
+        muteButton.classList.add('muted');
+        muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+      }
+      
+      // Initialize play button state for video thumbnail
+      const activeThumbnail = document.querySelector('.thumbnail-item.active');
+      if (activeThumbnail && activeThumbnail.dataset.type === 'video') {
+        currentMediaType = 'video';
+        mainVideo.style.display = 'block';
+        muteButton.style.display = 'flex';
+        // Set initial video source
+        mainVideo.src = activeThumbnail.dataset.src;
+        mainVideo.pause();
+        mainVideo.currentTime = 0;
+        updatePlayButtonState();
+      } else {
+        currentMediaType = 'image';
+      }
       
       // Function to get translated caption
       function getTranslatedCaption(captionKey) {
@@ -213,9 +244,67 @@
         return translations[currentLang][captionKey] || captionKey;
       }
       
+      // Function to update play button state
+      function updatePlayButtonState() {
+        if (currentMediaType === 'video') {
+          if (mainVideo.paused) {
+            mainImageContainer.classList.add('video-paused');
+            playButton.classList.remove('hidden');
+            playButton.innerHTML = '<i class="fas fa-play"></i>';
+          } else {
+            mainImageContainer.classList.remove('video-paused');
+            playButton.classList.add('hidden');
+          }
+        }
+      }
+      
+      // Mute button functionality
+      muteButton.addEventListener('click', function() {
+        if (mainVideo.muted) {
+          mainVideo.muted = false;
+          this.classList.remove('muted');
+          this.innerHTML = '<i class="fas fa-volume-up"></i>';
+          localStorage.setItem('videoMuted', 'false');
+        } else {
+          mainVideo.muted = true;
+          this.classList.add('muted');
+          this.innerHTML = '<i class="fas fa-volume-mute"></i>';
+          localStorage.setItem('videoMuted', 'true');
+        }
+      });
+      
+      // Play button functionality
+      playButton.addEventListener('click', function() {
+        if (mainVideo.paused) {
+          mainVideo.play();
+        } else {
+          mainVideo.pause();
+        }
+      });
+      
+      // Video click functionality
+      mainVideo.addEventListener('click', function() {
+        if (this.paused) {
+          this.play();
+        } else {
+          this.pause();
+        }
+      });
+      
+      // Video event listeners
+      mainVideo.addEventListener('play', updatePlayButtonState);
+      mainVideo.addEventListener('pause', updatePlayButtonState);
+      mainVideo.addEventListener('ended', updatePlayButtonState);
+      mainVideo.addEventListener('loadeddata', updatePlayButtonState);
+      
       // Thumbnail click functionality
       thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', function() {
+          // Check if this thumbnail is already active
+          if (this.classList.contains('active')) {
+            return; // Don't do anything if already active
+          }
+          
           const type = this.dataset.type;
           const src = this.dataset.src;
           const captionKey = this.dataset.caption;
@@ -223,8 +312,8 @@
           
           // Stop current video if playing
           if (currentMediaType === 'video' && mainVideo.src) {
-            mainVideo.pause();
             mainVideo.currentTime = 0;
+            mainVideo.pause();
           }
           
           // Remove active class from all thumbnails
@@ -237,15 +326,21 @@
           if (type === 'video') {
             mainImage.style.display = 'none';
             mainVideo.style.display = 'block';
+            muteButton.style.display = 'flex';
             mainVideo.src = src;
-            if (poster) {
-              mainVideo.poster = poster;
-            }
-            // Auto-play video when clicked
-            mainVideo.play();
+            // Set video to paused state and show play button
+            mainVideo.pause();
+            mainVideo.currentTime = 0;
             currentMediaType = 'video';
+            // Force update play button state after a short delay to ensure video is loaded
+            setTimeout(() => {
+              updatePlayButtonState();
+            }, 100);
           } else {
             mainVideo.style.display = 'none';
+            muteButton.style.display = 'none';
+            playButton.classList.add('hidden');
+            mainImageContainer.classList.remove('video-paused');
             mainImage.style.display = 'block';
             mainImage.src = src;
             currentMediaType = 'image';
