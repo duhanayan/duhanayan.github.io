@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack - Duhan Ayan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Duhan Ayan</h1>
+      <h3 data-i18n="profileTitle">Oyun Geliştiricisi</h3>
+    </div>
+    <div class="social">
+      <a href="https://github.com/duhanayan" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/duhanayan" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-linkedin"></i>
+      </a>
+      <a href="/resume.pdf" class="cv-link">
+        <span data-i18n="resume">Özgeçmiş</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+      <div class="language-select">
+        <select aria-label="Dil seçimi">
+          <option value="tr">TR</option>
+          <option value="en">EN</option>
+        </select>
+        <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <a href="../index.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+      <span data-i18n="backToHome">Ana Sayfaya Dön</span>
+    </a>
+
+    <div class="project-header">
+      <h1 class="project-title">Stack</h1>
+      <div class="project-meta">
+        <div class="meta-item">
+          <i class="fas fa-users"></i>
+          <span>Takım: 3 Kişi</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-user"></i>
+          <span>Rol: Game Developer</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-calendar"></i>
+          <span>2023</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-gamepad"></i>
+          <span>Mobil Oyun</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-gallery">
+      <div class="gallery-container">
+        <!-- Left Column: Game -->
+        <div class="gallery-left">
+          <h3>Oyunu Oyna</h3>
+          <div class="game-container">
+            <iframe frameborder="0" src="https://itch.io/embed-upload/13785215?color=333333" width="400" height="867">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Divider -->
+        <div class="gallery-divider"></div>
+        
+        <!-- Right Column: Screenshots -->
+        <div class="gallery-right">
+          <h3 data-i18n="screenshots">Ekran Görüntüleri</h3>
+          
+          <!-- Main Gallery Display -->
+          <div class="gallery-main">
+            <div class="main-image-container" id="mainImageContainer">
+              <img id="mainImage" src="../assets/images/stack/stack_mainMenu.PNG" alt="Stack Ana Menü">
+              <video id="mainVideo" loop style="display: none;">
+                <source src="../assets/images/stack/stack_gameplay.mov" type="video/quicktime">
+                <source src="../assets/images/stack/stack_gameplay.mov" type="video/mp4">
+                Tarayıcınız video oynatmayı desteklemiyor.
+              </video>
+              <div class="image-overlay">
+                <span id="mainCaption" data-i18n="mainMenu">Ana Menü</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Thumbnail Gallery -->
+          <div class="gallery-thumbnails">
+            <div class="thumbnail-item active" data-type="image" data-src="../assets/images/stack/stack_mainMenu.PNG" data-caption="mainMenu">
+              <img src="../assets/images/stack/stack_mainMenu.PNG" alt="Stack Ana Menü">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/stack/stack_inGame.PNG" data-caption="inGame">
+              <img src="../assets/images/stack/stack_inGame.PNG" alt="Stack Oyun İçi">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/stack/stack_gameOver.PNG" data-caption="gameOver">
+              <img src="../assets/images/stack/stack_gameOver.PNG" alt="Stack Oyun Sonu">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="video" data-src="../assets/images/stack/stack_gameplay.mov" data-caption="gameplayVideo" data-poster="../assets/images/stack/stack_inGame.PNG">
+              <img src="../assets/images/stack/stack_inGame.PNG" alt="Stack Gameplay Video">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="projectOverview">Proje Genel Bakış</h3>
+      <p data-i18n="stackOverview">Stack, popüler mobil oyun Stack'ın klon versiyonudur. Unity ile geliştirilen bu proje, oyuncuların blokları üst üste dizerek yüksek kuleler inşa etmelerini sağlar. Oyun, basit ama bağımlılık yapıcı mekaniklerle oyuncuları uzun süre oyunda tutmayı hedefler.</p>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="myRole">Rolüm ve Sorumluluklar</h3>
+      <ul>
+        <li data-i18n="stackRole1">Ana oyun mekaniklerinin programlanması (blok yerleştirme, fizik sistemi)</li>
+        <li data-i18n="stackRole2">UI/UX sisteminin tasarımı ve implementasyonu</li>
+        <li data-i18n="stackRole3">Skor sistemi ve ilerleme mekanizmaları</li>
+        <li data-i18n="stackRole4">Mobil optimizasyon ve performans iyileştirmeleri</li>
+        <li data-i18n="stackRole5">Ses efektleri ve müzik entegrasyonu</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="technicalDetails">Teknik Detaylar</h3>
+      <div class="tech-stack">
+        <span class="tech-tag">Unity</span>
+        <span class="tech-tag">C#</span>
+        <span class="tech-tag">Mobile Development</span>
+        <span class="tech-tag">Physics System</span>
+        <span class="tech-tag">UI/UX</span>
+        <span class="tech-tag">Audio Integration</span>
+      </div>
+      <p data-i18n="stackTechDetails">Proje Unity 2022.3 LTS kullanılarak geliştirildi. Özel fizik sistemi, responsive UI tasarımı ve mobil platform optimizasyonları içerir. Oyun, farklı ekran boyutlarında sorunsuz çalışacak şekilde tasarlandı.</p>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="challenges">Karşılaşılan Zorluklar</h3>
+      <ul>
+        <li data-i18n="stackChallenge1">Blok yerleştirme mekaniklerinin hassas kontrolü</li>
+        <li data-i18n="stackChallenge2">Farklı cihazlarda tutarlı performans sağlama</li>
+        <li data-i18n="stackChallenge3">Oyuncu deneyimini optimize etme</li>
+        <li data-i18n="stackChallenge4">Mobil platform kısıtlamalarını aşma</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="results">Sonuçlar</h3>
+      <p data-i18n="stackResults">Proje başarıyla tamamlandı ve test kullanıcılarından olumlu geri bildirimler alındı. Oyun mekanikleri akıcı çalışıyor ve mobil platformlarda sorunsuz performans gösteriyor. Proje, Unity ile mobil oyun geliştirme konusunda değerli deneyim kazandırdı.</p>
+    </div>
+  </main>
+
+  <script src="../js/lang-switcher.js"></script>
+  
+  <script>
+    // Gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mainImage = document.getElementById('mainImage');
+      const mainVideo = document.getElementById('mainVideo');
+      const mainCaption = document.getElementById('mainCaption');
+      const thumbnails = document.querySelectorAll('.thumbnail-item');
+      
+      let currentMediaType = 'image';
+      
+      // Function to get translated caption
+      function getTranslatedCaption(captionKey) {
+        const currentLang = document.querySelector('select').value || 'tr';
+        const translations = {
+          tr: {
+            mainMenu: "Ana Menü Ekranı",
+            inGame: "Oyun İçi Ekranı",
+            gameOver: "Oyun Sonu Ekranı",
+            gameplayVideo: "Oynanış Videosu"
+          },
+          en: {
+            mainMenu: "Main Menu Screen",
+            inGame: "In Game Screen",
+            gameOver: "Game Over Screen",
+            gameplayVideo: "Gameplay Video"
+          }
+        };
+        return translations[currentLang][captionKey] || captionKey;
+      }
+      
+      // Thumbnail click functionality
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          const type = this.dataset.type;
+          const src = this.dataset.src;
+          const captionKey = this.dataset.caption;
+          const poster = this.dataset.poster;
+          
+          // Stop current video if playing
+          if (currentMediaType === 'video' && mainVideo.src) {
+            mainVideo.pause();
+            mainVideo.currentTime = 0;
+          }
+          
+          // Remove active class from all thumbnails
+          thumbnails.forEach(thumb => thumb.classList.remove('active'));
+          
+          // Add active class to clicked thumbnail
+          this.classList.add('active');
+          
+          // Update main display
+          if (type === 'video') {
+            mainImage.style.display = 'none';
+            mainVideo.style.display = 'block';
+            mainVideo.src = src;
+            if (poster) {
+              mainVideo.poster = poster;
+            }
+            // Auto-play video when clicked
+            mainVideo.play();
+            currentMediaType = 'video';
+          } else {
+            mainVideo.style.display = 'none';
+            mainImage.style.display = 'block';
+            mainImage.src = src;
+            currentMediaType = 'image';
+          }
+          
+          // Update caption with translation
+          mainCaption.textContent = getTranslatedCaption(captionKey);
+        });
+      });
+      
+      // Language change handler
+      document.querySelector('select').addEventListener('change', function() {
+        // Update main caption if it has a data-i18n attribute
+        if (mainCaption.hasAttribute('data-i18n')) {
+          const captionKey = mainCaption.getAttribute('data-i18n');
+          mainCaption.textContent = getTranslatedCaption(captionKey);
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

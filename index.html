@@ -3,286 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duhan Ayan – Game Programmer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-   :root {
-  --bg: #101014;
-  --card-bg: #1b1c20;
-  --text: #e0e0e0;
-  --sub: #999999;
-  --accent: #a3bffa;
-  --highlight: #ff5f6d;
-  --radius: 8px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-  border-bottom: 1px solid #2a2a2a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.header-left h1 {
-  font-size: 2.6rem;
-  font-weight: 600;
-  color: var(--highlight);
-}
-
-.header-left span {
-  font-size: 1.1rem;
-  color: var(--accent);
-}
-
-.social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.social a {
-  color: var(--accent);
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  text-decoration: none;
-}
-
-.social a:hover {
-  color: var(--highlight);
-}
-
-.social .social-icon {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.cv-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-
-.social .cv-link {
-  border: 1px solid var(--accent);
-  padding: 0 1rem;
-  border-radius: 4px;
-  font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  height: 3rem;
-  transition: all 0.3s ease;
-}
-
-.social .cv-link:hover {
-  color: var(--highlight);
-  border-color: var(--highlight);
-}
-
-.social select {
-  height: 3rem;
-  font-size: 1.05rem;
-  padding: 0 0.8rem;
-  background: var(--bg);
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-align: center;
-}
-
-.language-select {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 3rem;
-}
-
-.language-select select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: var(--bg);
-  color: var(--accent);
-  font-size: 1.05rem;
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  padding: 0 2rem 0 0.8rem;
-  height: 100%;
-}
-
-.language-select .select-arrow {
-  position: absolute;
-  right: 0.8rem;
-  pointer-events: none;
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-
-
-
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.intro {
-  margin-bottom: 3rem;
-  font-size: 1.15rem;
-  color: var(--sub);
-  transition: opacity 0.4s ease;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  color: var(--highlight);
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-.card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.4s ease;
-}
-
-.card-content {
-  padding: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  transition: all 0.3s ease;
-}
-
-.title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title-row h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--highlight);
-  transition: color 0.3s ease;
-}
-
-.title-row .arrow {
-  font-size: 1.2rem;
-  color: var(--accent);
-}
-
-.desc {
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .header-left {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  .header-left h1 {
-    font-size: 2rem;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: 200px;
-  }
-
-.role {
-  font-size: 1rem;
-  color: var(--sub);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.team-size {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.95rem;
-  color: var(--accent);
-}
-
-
-}
-
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <title>Duhan Ayan – Game Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -290,143 +14,205 @@ h2 {
       <h1>Duhan Ayan</h1>
       <h3 data-i18n="profileTitle">Oyun Geliştiricisi</h3>
     </div>
-	<div class="social">
-  <a href="https://github.com/duhanayan" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-    <i class="social-icon fab fa-github"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/duhanayan" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-    <i class="social-icon fab fa-linkedin"></i>
-  </a>
-  <a href="/resume.pdf" class="cv-link">
-  <span data-i18n="resume">Özgeçmiş</span>
-  <i class="fas fa-arrow-down" ...></i>
-</a>
-
-<div class="language-select">
-  <select aria-label="Dil seçimi">
-    <option value="tr">TR</option>
-    <option value="en">EN</option>
-  </select>
-  <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
-</div>
-
-</div>
-
+    <div class="social">
+      <a href="https://github.com/duhanayan" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/duhanayan" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-linkedin"></i>
+      </a>
+      <a href="/resume.pdf" class="cv-link">
+        <span data-i18n="resume">Özgeçmiş</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+      <div class="language-select">
+        <select aria-label="Dil seçimi">
+          <option value="tr">TR</option>
+          <option value="en">EN</option>
+        </select>
+        <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="profile" style="margin-bottom: 3rem;">
-      <h2 data-i18n="profile">Profil</h2>
-      
-      <p data-i18n="profileText" style="color: var(--sub); font-size: 1.1rem; max-width: 800px;">Tutkulu bir oyun geliştiricisi olarak, performansa odaklı, oynanabilirliği yüksek projeler üretmeyi hedefliyorum. Sistem seviyesinden kullanıcı arayüzüne kadar oyunların tüm katmanlarında deneyimliyim. Takım çalışmasına yatkın, sürekli öğrenmeye açık biri olarak projelere hem teknik hem yaratıcı katkılar sunuyorum.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 data-i18n="heroTitle">Oyun Geliştiricisi</h2>
+          <p data-i18n="heroSubtitle">Performansa odaklı, oynanabilirliği yüksek oyunlar geliştiriyorum</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">
+                <i class="fab fa-unity"></i>
+              </span>
+              <span class="stat-label">Unity</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Yıl Deneyim</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Tamamlanan Proje</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="profile-info">
+              <h3>Duhan Ayan</h3>
+              <p>Game Developer</p>
+              <div class="profile-tags">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Mobile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <h2 data-i18n="techExp">Teknik Yetenekler</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 3rem;">
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C</span>
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C++</span>
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">C#</span>
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Unity</span>
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Qt</span>
-      <span style="border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 0.8rem; border-radius: var(--radius); font-size: 1rem;">Git</span>
-    </div>
-
-    <h2 data-i18n="gameProj">Oyun Projeleri</h2>
-    <div class="projects">
-      <!-- Project Card 1 -->
-      <a href="#" class="card">
-        <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Space Shooter GIF">
-        <div class="card-content">
-          <div class="title-row">
-            <h3>Space Shooter</h3>
-            <span class="arrow">&rarr;</span>
-		</div>
-		<div class="role">
-		  <span class="team-size">
-			<i class="fas fa-users"></i> 3
-		  </span>
-		  Game Programmer
-		</div>
-          <p class="desc" data-i18n="desc1">SDL2 ile geliştirilen arcade shooter. ECS mimarisi, procedural arka planlar ve temel yapay zekâ.</p>
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="skills-content">
+        <div class="skills-card">
+          <h4 data-i18n="techExp">Teknik Yetenekler</h4>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h5>Programlama</h5>
+              <div class="skill-tags">
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C#</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h5>Oyun Motorları</h5>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">Unity 2D</span>
+                <span class="skill-tag">Unity UI</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h5>Araçlar</h5>
+              <div class="skill-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Visual Studio</span>
+                <span class="skill-tag">Blender</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
+    </section>
 
-      <!-- Project Card 2 -->
-      <a href="#" class="card">
-        <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Platformer GIF">
-        <div class="card-content">
-          <div class="title-row">
-            <h3>Platformer</h3>
-            <span class="arrow">&rarr;</span>
-		</div>
-		<div class="role">
-			<span class="team-size">
-				<i class="fas fa-users"></i> 3
-			</span>
-			Game Programmer
-		</div>
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <div class="section-header">
+        <h2 data-i18n="gameProj">Oyun Projeleri</h2>
+      </div>
+      <div class="projects">
+        <!-- Project Card 1 -->
+        <a href="projects/stack.html" class="card">
+          <div class="card-image">
+            <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Stack Game GIF">
+            <div class="card-overlay">
+              <span class="view-project">Projeyi İncele</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Stack</h3>
+              <div class="card-meta">
+                <span class="team-size">
+                  <i class="fas fa-users"></i> 3
+                </span>
+                <span class="role">Game Developer</span>
+              </div>
+            </div>
+            <p class="desc" data-i18n="desc1">Unity ile geliştirilen mobil oyun Stack'ın klon versiyonu</p>
+            <div class="card-tech">
+              <span class="tech-badge">Unity</span>
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Mobile</span>
+            </div>
+          </div>
+        </a>
 
-          <p class="desc" data-i18n="desc2">Unity ile geliştirilen 2D platform oyunu. Özel fizik sistemi, shader efektleri ve araç zinciri.</p>
+        <!-- Project Card 2 -->
+        <a href="projects/platformer.html" class="card">
+          <div class="card-image">
+            <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Platformer Game GIF">
+            <div class="card-overlay">
+              <span class="view-project">Projeyi İncele</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Platformer</h3>
+              <div class="card-meta">
+                <span class="team-size">
+                  <i class="fas fa-users"></i> 3
+                </span>
+                <span class="role">Game Developer</span>
+              </div>
+            </div>
+            <p class="desc" data-i18n="desc2">2D platform oyunu, özel fizik sistemi ve shader efektleri</p>
+            <div class="card-tech">
+              <span class="tech-badge">Unity</span>
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">2D Physics</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project Card 3 -->
+        <a href="projects/multiplayer-arena.html" class="card">
+          <div class="card-image">
+            <img src="https://media.giphy.com/media/jt7bAtEijhurm/giphy.gif" alt="Multiplayer Arena GIF">
+            <div class="card-overlay">
+              <span class="view-project">Projeyi İncele</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Multiplayer Arena</h3>
+              <div class="card-meta">
+                <span class="team-size">
+                  <i class="fas fa-users"></i> 3
+                </span>
+                <span class="role">Game Developer</span>
+              </div>
+            </div>
+            <p class="desc" data-i18n="desc3">Unity ile geliştirilen çok oyunculu arena oyunu</p>
+            <div class="card-tech">
+              <span class="tech-badge">Unity</span>
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Multiplayer</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h3 data-i18n="aboutTitle">Hakkımda</h3>
+          <p data-i18n="profileText">Tutkulu bir oyun geliştiricisi olarak, performansa odaklı, oynanabilirliği yüksek projeler üretmeyi hedefliyorum. Sistem seviyesinden kullanıcı arayüzüne kadar oyunların tüm katmanlarında deneyimliyim.</p>
         </div>
-      </a>
-
-      <!-- Project Card 3 -->
-      <a href="#" class="card">
-        <img src="https://media.giphy.com/media/jt7bAtEijhurm/giphy.gif" alt="Multiplayer Arena GIF">
-        <div class="card-content">
-          <div class="title-row">
-            <h3>Multiplayer Arena</h3>
-            <span class="arrow">&rarr;</span>
-		</div>
-		<div class="role">
-			<span class="team-size">
-				<i class="fas fa-users"></i> 3
-			</span>
-			Game Programmer
-		</div>
-
-          <p class="desc" data-i18n="desc3">Unreal Engine tabanlı çok oyunculu arena. Gameplay Ability System ve gerçek zamanlı ağ senkronizasyonu.</p>
-        </div>
-      </a>
-    </div>
+      </div>
+    </section>
   </main>
-<script>
-  const translations = {
-    en: {
-      resume: "Resume",
-      profileTitle: "Game Programmer",
-      profile: "Profile",
-      profileText: "As a passionate game developer, I aim to create performance-focused, highly playable projects. I have experience across all layers of games, from system-level to user interface. I enjoy contributing both technically and creatively, and I'm always eager to learn.",
-      techExp: "Technical Experience",
-      gameProj: "Game Projects",
-      desc1: "An arcade shooter built with SDL2. Features ECS architecture, procedural backgrounds, and basic AI.",
-      desc2: "A 2D platformer developed in Unity. Includes custom physics, shader effects, and toolchain.",
-      desc3: "Multiplayer arena built in Unreal Engine with Gameplay Ability System and real-time networking."
-    },
-    tr: {
-      resume: "Özgeçmiş",
-      profileTitle: "Oyun Geliştiricisi",
-      profile: "Profil",
-      profileText: "Tutkulu bir oyun geliştiricisi olarak, performansa odaklı, oynanabilirliği yüksek projeler üretmeyi hedefliyorum. Sistem seviyesinden kullanıcı arayüzüne kadar oyunların tüm katmanlarında deneyimliyim. Takım çalışmasına yatkın, sürekli öğrenmeye açık biri olarak projelere hem teknik hem yaratıcı katkılar sunuyorum.",
-      techExp: "Teknik Yetenekler",
-      gameProj: "Oyun Projeleri",
-      desc1: "SDL2 ile geliştirilen arcade shooter. ECS mimarisi, procedural arka planlar ve temel yapay zekâ.",
-      desc2: "Unity ile geliştirilen 2D platform oyunu. Özel fizik sistemi, shader efektleri ve araç zinciri.",
-      desc3: "Unreal Engine tabanlı çok oyunculu arena. Gameplay Ability System ve gerçek zamanlı ağ senkronizasyonu."
-    }
-  };
 
-  document.querySelector('select').addEventListener('change', function () {
-  const lang = this.value;
-
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-});
-
-</script>
+  <script src="js/lang-switcher.js"></script>
 </body>
 </html>
