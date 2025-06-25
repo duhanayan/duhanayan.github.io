@@ -46,20 +46,26 @@
       <div class="project-meta">
         <div class="meta-item">
           <i class="fas fa-users"></i>
-          <span>Takım: 3 Kişi</span>
+          <span data-i18n="teamSize">Takım: 3 Kişi</span>
         </div>
         <div class="meta-item">
           <i class="fas fa-user"></i>
-          <span>Rol: Game Developer</span>
+          <span data-i18n="role">Rol: Game Developer</span>
         </div>
         <div class="meta-item">
           <i class="fas fa-calendar"></i>
-          <span>2023</span>
+          <span data-i18n="year2023">2023</span>
         </div>
         <div class="meta-item">
           <i class="fas fa-gamepad"></i>
-          <span>Mobil Oyun</span>
+          <span data-i18n="mobileGame">Mobil Oyun</span>
         </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/duhanayan/stack-game" target="_blank" rel="noopener noreferrer" class="github-button">
+          <i class="fab fa-github"></i>
+          <span data-i18n="viewSource">Kaynak Kodu Görüntüle</span>
+        </a>
       </div>
     </div>
 
@@ -67,7 +73,7 @@
       <div class="gallery-container">
         <!-- Left Column: Game -->
         <div class="gallery-left">
-          <h3>Oyunu Oyna</h3>
+          <h3 data-i18n="playGame">Oyunu Oyna</h3>
           <div class="game-container">
             <iframe frameborder="0" src="https://itch.io/embed-upload/13785215?color=333333" width="400" height="867">
             </iframe>
@@ -84,21 +90,28 @@
           <!-- Main Gallery Display -->
           <div class="gallery-main">
             <div class="main-image-container" id="mainImageContainer">
-              <img id="mainImage" src="../assets/images/stack/stack_mainMenu.PNG" alt="Stack Ana Menü">
-              <video id="mainVideo" loop style="display: none;">
+              <img id="mainImage" src="../assets/images/stack/stack_inGame.PNG" alt="Stack Gameplay Video" style="display: none;">
+              <video id="mainVideo" loop autoplay muted>
                 <source src="../assets/images/stack/stack_gameplay.mov" type="video/quicktime">
-                <source src="../assets/images/stack/stack_gameplay.mov" type="video/mp4">
-                Tarayıcınız video oynatmayı desteklemiyor.
+                <source src="../assets/images/stack/stack_gameplay.mp4" type="video/mp4">
+                <span data-i18n="videoNotSupported">Tarayıcınız video oynatmayı desteklemiyor.</span>
               </video>
               <div class="image-overlay">
-                <span id="mainCaption" data-i18n="mainMenu">Ana Menü</span>
+                <span id="mainCaption" data-i18n="gameplayVideo">Oynanış Videosu</span>
               </div>
             </div>
           </div>
           
           <!-- Thumbnail Gallery -->
           <div class="gallery-thumbnails">
-            <div class="thumbnail-item active" data-type="image" data-src="../assets/images/stack/stack_mainMenu.PNG" data-caption="mainMenu">
+            <div class="thumbnail-item active" data-type="video" data-src="../assets/images/stack/stack_gameplay.mov" data-caption="gameplayVideo" data-poster="../assets/images/stack/stack_inGame.PNG">
+              <img src="../assets/images/stack/stack_inGame.PNG" alt="Stack Gameplay Video">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/stack/stack_mainMenu.PNG" data-caption="mainMenu">
               <img src="../assets/images/stack/stack_mainMenu.PNG" alt="Stack Ana Menü">
               <div class="thumbnail-overlay">
                 <i class="fas fa-image"></i>
@@ -116,13 +129,6 @@
               <img src="../assets/images/stack/stack_gameOver.PNG" alt="Stack Oyun Sonu">
               <div class="thumbnail-overlay">
                 <i class="fas fa-image"></i>
-              </div>
-            </div>
-            
-            <div class="thumbnail-item" data-type="video" data-src="../assets/images/stack/stack_gameplay.mov" data-caption="gameplayVideo" data-poster="../assets/images/stack/stack_inGame.PNG">
-              <img src="../assets/images/stack/stack_inGame.PNG" alt="Stack Gameplay Video">
-              <div class="thumbnail-overlay">
-                <i class="fas fa-play"></i>
               </div>
             </div>
           </div>
