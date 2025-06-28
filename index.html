@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duhan Ayan – Game Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -117,7 +117,6 @@
     <section class="projects-section">
       <div class="section-header">
         <h2 data-i18n="gameProj">Oyun Projeleri</h2>
-        <p data-i18n="projectsSubtitle">Son geliştirdiğim oyun projeleri</p>
       </div>
       <div class="projects">
         <!-- Project Card 1 -->
@@ -134,7 +133,7 @@
             </div>
             <div class="card-meta">
               <span class="team-size">
-                <i class="fas fa-users"></i> 3
+                <i class="fas fa-users"></i> 1
               </span>
               <span class="role" data-i18n="gameDeveloper">Game Developer</span>
             </div>
@@ -148,28 +147,28 @@
         </a>
 
         <!-- Project Card 2 -->
-        <a href="projects/platformer.html" class="card">
+        <a href="projects/juicy-merge.html" class="card">
           <div class="card-image">
-            <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Platformer Game GIF">
+            <img src="assets/images/juicy-merge/juicy_merge_gameplay.PNG" alt="Juicy Merge Game">
             <div class="card-overlay">
               <span class="view-project" data-i18n="viewProject">Projeyi İncele</span>
             </div>
           </div>
           <div class="card-content">
             <div class="card-header">
-              <h3 data-i18n="platformer">Platformer</h3>
+              <h3 data-i18n="juicyMerge">Juicy Merge</h3>
             </div>
             <div class="card-meta">
               <span class="team-size">
-                <i class="fas fa-users"></i> 3
+                <i class="fas fa-users"></i> 1
               </span>
               <span class="role" data-i18n="gameDeveloper">Game Developer</span>
             </div>
-            <p class="desc" data-i18n="desc2">2D platform oyunu, özel fizik sistemi ve shader efektleri</p>
+            <p class="desc" data-i18n="juicyMergeDesc">Meyveleri birleştirerek büyük meyveler oluşturduğunuz puzzle oyunu</p>
             <div class="card-tech">
               <span class="tech-badge" data-i18n="unity">Unity</span>
               <span class="tech-badge" data-i18n="csharp">C#</span>
-              <span class="tech-badge" data-i18n="physics2d">2D Physics</span>
+              <span class="tech-badge" data-i18n="puzzle">Puzzle</span>
             </div>
           </div>
         </a>
@@ -215,5 +214,31 @@
   </main>
 
   <script src="js/lang-switcher.js"></script>
+  <script src="js/translations/home.js"></script>
+  <script>
+    // Home page translation handler
+    function updateHomeTranslations(language) {
+      const translations = homeTranslations[language];
+      
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[key]) {
+          element.textContent = translations[key];
+        }
+      });
+    }
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', (event) => {
+      updateHomeTranslations(event.detail.language);
+    });
+    
+    // Initialize translations on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentLang = getCurrentLanguage();
+      updateHomeTranslations(currentLang);
+    });
+  </script>
 </body>
 </html>

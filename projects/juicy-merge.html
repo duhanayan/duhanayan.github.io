@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juicy Merge - Duhan Ayan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Duhan Ayan</h1>
+      <h3 data-i18n="profileTitle">Oyun Geliştiricisi</h3>
+    </div>
+    <div class="social">
+      <a href="https://github.com/duhanayan" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/duhanayan" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <i class="social-icon fab fa-linkedin"></i>
+      </a>
+      <a href="/resume.pdf" class="cv-link">
+        <span data-i18n="resume">Özgeçmiş</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+      <div class="language-select">
+        <select aria-label="Dil seçimi">
+          <option value="tr">TR</option>
+          <option value="en">EN</option>
+        </select>
+        <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <div class="project-header">
+      <div class="header-top">
+        <a href="../index.html" class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span data-i18n="backToHome">Ana Sayfaya Dön</span>
+        </a>
+        <h1 class="project-title">Juicy Merge</h1>
+      </div>
+      <div class="project-meta">
+        <div class="meta-item">
+          <i class="fas fa-users"></i>
+          <span data-i18n="teamSize">Takım: 1 Kişi</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-user"></i>
+          <span data-i18n="role">Rol: Game Developer</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-calendar"></i>
+          <span data-i18n="year2025">2025</span>
+        </div>
+        <div class="meta-item">
+          <i class="fas fa-gamepad"></i>
+          <span data-i18n="mobileGame">Puzzle Game</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-gallery">
+      <div class="gallery-container">
+        <!-- Left Column: Game -->
+        <div class="gallery-left">
+          <h3 data-i18n="playGame">Oyunu Oyna</h3>
+          <div class="game-container">
+            <iframe frameborder="0" src="https://itch.io/embed-upload/13785215?color=333333" width="400" height="867">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Divider -->
+        <div class="gallery-divider"></div>
+        
+        <!-- Right Column: Screenshots -->
+        <div class="gallery-right">
+          <h3 data-i18n="screenshots">Ekran Görüntüleri</h3>
+          
+          <!-- Main Gallery Display -->
+          <div class="gallery-main">
+            <div class="main-image-container" id="mainImageContainer">
+              <img id="mainImage" src="../assets/images/juicy-merge/juicy_merge_gameplay.PNG" alt="Juicy Merge Gameplay" style="display: block;">
+              <video id="mainVideo" loop style="display: none;">
+                <source src="../assets/images/juicy-merge/juicy_merge_gameplay.mp4" type="video/mp4">
+                <span data-i18n="videoNotSupported">Tarayıcınız video oynatmayı desteklemiyor.</span>
+              </video>
+              <button class="mute-button" id="muteButton" style="display: none;">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button class="play-button hidden" id="playButton">
+                <i class="fas fa-play"></i>
+              </button>
+              <div class="image-overlay">
+                <span id="mainCaption" data-i18n="gameplayScreenshot">Oynanış Ekran Görüntüsü</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Thumbnail Gallery -->
+          <div class="gallery-thumbnails">
+            <div class="thumbnail-item active" data-type="image" data-src="../assets/images/juicy-merge/juicy_merge_gameplay.PNG" data-caption="gameplayScreenshot">
+              <img src="../assets/images/juicy-merge/juicy_merge_gameplay.PNG" alt="Juicy Merge Oynanış">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/juicy-merge/juicy_merge_mainMenu.PNG" data-caption="mainMenu">
+              <img src="../assets/images/juicy-merge/juicy_merge_mainMenu.PNG" alt="Juicy Merge Ana Menü">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/juicy-merge/juicy_merge_inGame.PNG" data-caption="inGame">
+              <img src="../assets/images/juicy-merge/juicy_merge_inGame.PNG" alt="Juicy Merge Oyun İçi">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            
+            <div class="thumbnail-item" data-type="image" data-src="../assets/images/juicy-merge/juicy_merge_gameOver.PNG" data-caption="gameOver">
+              <img src="../assets/images/juicy-merge/juicy_merge_gameOver.PNG" alt="Juicy Merge Oyun Sonu">
+              <div class="thumbnail-overlay">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://github.com/duhanayan/juicy-merge" target="_blank" rel="noopener noreferrer" class="github-button">
+        <i class="fab fa-github"></i>
+        <span data-i18n="viewSource">Kaynak Kodu Görüntüle</span>
+      </a>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="projectOverview">Proje Genel Bakış</h3>
+      <p data-i18n="juicyMergeOverview">Juicy Merge, Google Play Store'da 10M+ indirme ve 4.4 yıldız puanına sahip popüler "Fruit Merge: Juicy Drop Game" oyununun klon versiyonudur. Aynı meyveleri birleştirerek daha büyük meyveler oluşturduğunuz bağımlılık yapıcı puzzle oyunu. Unity ile geliştirilen bu proje, sürükle-bırak mekanikleri, stratejik oynanış ve renkli görsel efektlerle oyuncuları uzun süre oyunda tutmayı hedefler.</p>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="myRole">Rolüm ve Sorumluluklar</h3>
+      <div class="role-cards">
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-gamepad"></i>
+            <h4 data-i18n="gameMechanics">Oyun Mekanikleri & Merge Sistemi</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-apple-alt"></i>
+              <div class="bullet-point-icon-content">12 farklı meyve türü (Kiraz'dan Karpuz'a) ile enum tabanlı tip sistemi geliştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-magnet"></i>
+              <div class="bullet-point-icon-content">Çarpışma algılama ile otomatik birleştirme sistemi kurarak, InstanceID kontrolü ile çift birleştirme sorununu çözdüm</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-hand-pointer"></i>
+              <div class="bullet-point-icon-content">Dokunmatik giriş işleme sistemini optimize ettim ve her meyve türü için Physics2D materyalleri hazırladım</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h4 data-i18n="performanceOptimization">Performans Optimizasyonu</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-database"></i>
+              <div class="bullet-point-icon-content">Unity ObjectPool ile bellek verimli meyve doğurma sistemi tasarladım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-tachometer-alt"></i>
+              <div class="bullet-point-icon-content">120 FPS hedef kare hızı için collectionCheck: false ile performans optimizasyonu yaptım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-recycle"></i>
+              <div class="bullet-point-icon-content">Meyve Havuzu konteyneri ile düzenli nesne yönetimi ve otomatik temizlik sistemi kurduk</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-palette"></i>
+            <h4 data-i18n="uiuxDesign">UI/UX & Görsel Efektler</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-paint-brush"></i>
+              <div class="bullet-point-icon-content">TextMeshPro ile modern arayüz tasarladım ve birleştirme animasyonları için parçacık efektleri ekledim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-palette"></i>
+              <div class="bullet-point-icon-content">Renk kodlu doğurma efektleri ve hamle sayacı gösterimi ile oyuncu deneyimini geliştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-trophy"></i>
+              <div class="bullet-point-icon-content">Yüksek skor takibi ve yeniden başlatma işlevselliği ile oyun sonu ekranı oluşturdum</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-trophy"></i>
+            <h4 data-i18n="scoringSystem">Skor & İlerleme Sistemi</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-star"></i>
+              <div class="bullet-point-icon-content">Meyve türü tabanlı skor sistemi geliştirdim ve PlayerPrefs ile yüksek skor kalıcılığı sağladım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-chart-line"></i>
+              <div class="bullet-point-icon-content">Gerçek zamanlı skor gösterimi ve yeni rekor algılama sistemi ekledim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-gamepad"></i>
+              <div class="bullet-point-icon-content">Hamle sayacı takibi ve oyun sonu tetikleme sistemi ile oyun akışını tamamladım</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="technicalDetails">Teknik Yetenekler</h3>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-cogs"></i>
+            <h4 data-i18n="developmentPlatform">Unity & C# Geliştirme</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Unity 6</span>
+            <span class="tech-tag">C# 8.0+</span>
+            <span class="tech-tag">ObjectPool</span>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-database"></i>
+              <div class="bullet-point-icon-content">Unity ObjectPool ile bellek yönetimi sistemini kurarak, enum tabanlı tip sistemi geliştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-cogs"></i>
+              <div class="bullet-point-icon-content">Rigidbody2D fiziği, çarpışma algılama ve singleton desen uygulaması ile oyun altyapısını oluşturdum</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h4 data-i18n="mobileDevelopment">Mobil Geliştirme</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Touch Input</span>
+            <span class="tech-tag">Physics2D</span>
+            <span class="tech-tag">Cross-platform</span>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-hand-pointer"></i>
+              <div class="bullet-point-icon-content">Dokunmatik giriş işleme sistemini optimize ettim ve her meyve türü için Physics2D materyalleri hazırladım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-tachometer-alt"></i>
+              <div class="bullet-point-icon-content">120 FPS hedefi ile platformlar arası uyumluluk sağlayarak duyarlı arayüz tasarımı gerçekleştirdim</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-database"></i>
+            <h4 data-i18n="dataManagement">Veri Yönetimi</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">PlayerPrefs</span>
+            <span class="tech-tag">Singleton</span>
+            <span class="tech-tag">Object Pooling</span>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-save"></i>
+              <div class="bullet-point-icon-content">PlayerPrefs ile yüksek skor kalıcılığı sistemi kurarak, FruitSpawner için singleton desen uyguladım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-recycle"></i>
+              <div class="bullet-point-icon-content">Nesne havuzlama ile verimli bellek yönetimi sağlayarak otomatik temizlik sistemi geliştirdim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="challenges">Karşılaşılan Zorluklar</h3>
+      <div class="challenge-cards">
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-puzzle-piece"></i>
+            <h4 data-i18n="mergeAlgorithm">Merge Algoritması & Collision Detection</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-shield-alt"></i>
+              <div class="bullet-point-icon-content">InstanceID kontrolü ile çift birleştirme sorununu çözdüm ve IsMerging flag'i ile race condition problemlerini giderdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-search"></i>
+              <div class="bullet-point-icon-content">Aynı meyve türü algılama sistemi geliştirerek otomatik birleştirme tetikleme mekanizması kurduk</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-cogs"></i>
+              <div class="bullet-point-icon-content">Physics2D çarpışma işleme sistemini optimize ettim</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4 data-i18n="performanceOptimization">Performans Optimizasyonu</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-memory"></i>
+              <div class="bullet-point-icon-content">Object Pooling ile memory leak sorunlarını önleyerek, 60 FPS hedefi için performans optimizasyonu gerçekleştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-cogs"></i>
+              <div class="bullet-point-icon-content">Koleksiyon kontrolünü devre dışı bırakarak verimli meyve oluşturma sistemi ve otomatik temizlik mekanizması geliştirdim</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-palette"></i>
+            <h4 data-i18n="visualEffects">Görsel Efekt Sistemi</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-magic"></i>
+              <div class="bullet-point-icon-content">Particle System entegrasyonu ile renk kodlu meyve birleştirme efektleri oluşturdum</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-paint-brush"></i>
+              <div class="bullet-point-icon-content">Modern arayüz tasarımı ile oyun sonu ekranı ve yeniden başlatma işlevselliği geliştirdim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="developmentProcess">Geliştirme Süreci</h3>
+      <div class="process-cards">
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-lightbulb"></i>
+            <h4 data-i18n="conceptDesign">Konsept & Tasarım</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-search"></i>
+              <div class="bullet-point-icon-content">Orijinal Fruit Merge oyununu detaylı analiz ederek, 12 meyve türü enum tasarımı gerçekleştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-cogs"></i>
+              <div class="bullet-point-icon-content">Physics2D materyal sistemi planlaması yaparak, Object Pooling mimarisi ve Singleton desen uygulaması ile proje altyapısını oluşturdum</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-code"></i>
+            <h4 data-i18n="coreDevelopment">Temel Geliştirme</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-cogs"></i>
+              <div class="bullet-point-icon-content">FruitSpawner singleton yapısını kurarak, ObjectPool uygulaması ve çarpışma algılama sistemi geliştirdim</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-tools"></i>
+              <div class="bullet-point-icon-content">ScoreManager, GameEnderScript ve FPSDisplay bileşenlerini oluşturarak Physics2D materyalleri kurulumunu tamamladım</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-paint-brush"></i>
+            <h4 data-i18n="polishOptimization">Polish & Optimizasyon</h4>
+          </div>
+          <div class="bullet-points">
+            <div class="bullet-point-icon">
+              <i class="fas fa-tachometer-alt"></i>
+              <div class="bullet-point-icon-content">60 FPS optimizasyonu gerçekleştirerek, Particle System entegrasyonu ve arayüz iyileştirme çalışmaları yaptım</div>
+            </div>
+            <div class="bullet-point-icon">
+              <i class="fas fa-check-circle"></i>
+              <div class="bullet-point-icon-content">Performans testi, memory leak önleme ve platformlar arası test süreçlerini tamamladım</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="techStack">Teknoloji Yığını</h3>
+      <div class="tech-stack">
+        <span class="tech-tag">Unity 6</span>
+        <span class="tech-tag">C#</span>
+        <span class="tech-tag">ObjectPool</span>
+        <span class="tech-tag">Physics2D</span>
+        <span class="tech-tag">TextMeshPro</span>
+        <span class="tech-tag">Particle Systems</span>
+        <span class="tech-tag">Singleton Pattern</span>
+        <span class="tech-tag">PlayerPrefs</span>
+        <span class="tech-tag">Performance Optimization</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/lang-switcher.js"></script>
+  <script src="../js/translations/juicy-merge.js"></script>
+  <script>
+    // Juicy Merge page translation handler
+    function updateJuicyMergeTranslations(language) {
+      const translations = juicyMergeTranslations[language];
+      
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[key]) {
+          element.textContent = translations[key];
+        }
+      });
+    }
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', (event) => {
+      updateJuicyMergeTranslations(event.detail.language);
+    });
+    
+    // Initialize translations on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentLang = getCurrentLanguage();
+      updateJuicyMergeTranslations(currentLang);
+    });
+    
+    // Gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mainImage = document.getElementById('mainImage');
+      const mainVideo = document.getElementById('mainVideo');
+      const mainImageContainer = document.getElementById('mainImageContainer');
+      const mainCaption = document.getElementById('mainCaption');
+      const muteButton = document.getElementById('muteButton');
+      const playButton = document.getElementById('playButton');
+      const thumbnails = document.querySelectorAll('.thumbnail-item');
+
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          // Remove active class from all thumbnails
+          thumbnails.forEach(t => t.classList.remove('active'));
+          // Add active class to clicked thumbnail
+          this.classList.add('active');
+
+          const type = this.dataset.type;
+          const src = this.dataset.src;
+          const caption = this.dataset.caption;
+
+          if (type === 'video') {
+            mainImage.style.display = 'none';
+            mainVideo.style.display = 'block';
+            mainVideo.src = src;
+            muteButton.style.display = 'block';
+            playButton.classList.remove('hidden');
+            mainImageContainer.classList.add('video-paused');
+          } else {
+            mainVideo.style.display = 'none';
+            mainImage.style.display = 'block';
+            mainImage.src = src;
+            muteButton.style.display = 'none';
+            playButton.classList.add('hidden');
+            mainImageContainer.classList.remove('video-paused');
+          }
+
+          // Update caption
+          if (caption) {
+            const translationKey = mainCaption.getAttribute('data-i18n');
+            if (translationKey) {
+              const translation = window.translations[window.currentLang]?.[caption];
+              if (translation) {
+                mainCaption.textContent = translation;
+              }
+            }
+          }
+        });
+      });
+
+      // Video controls
+      if (playButton) {
+        playButton.addEventListener('click', function() {
+          mainVideo.play();
+          mainImageContainer.classList.remove('video-paused');
+          playButton.classList.add('hidden');
+        });
+      }
+
+      if (muteButton) {
+        muteButton.addEventListener('click', function() {
+          if (mainVideo.muted) {
+            mainVideo.muted = false;
+            muteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+            muteButton.classList.remove('muted');
+          } else {
+            mainVideo.muted = true;
+            muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            muteButton.classList.add('muted');
+          }
+        });
+      }
+
+      // Video ended event
+      if (mainVideo) {
+        mainVideo.addEventListener('ended', function() {
+          mainImageContainer.classList.add('video-paused');
+          playButton.classList.remove('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html> 

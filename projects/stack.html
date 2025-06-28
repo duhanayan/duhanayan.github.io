@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stack - Duhan Ayan</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -36,17 +36,18 @@
   </header>
 
   <main class="project-detail">
-    <a href="../index.html" class="back-button">
-      <i class="fas fa-arrow-left"></i>
-      <span data-i18n="backToHome">Ana Sayfaya Dön</span>
-    </a>
-
     <div class="project-header">
-      <h1 class="project-title">Stack</h1>
+      <div class="header-top">
+        <a href="../index.html" class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span data-i18n="backToHome">Ana Sayfaya Dön</span>
+        </a>
+        <h1 class="project-title">Stack</h1>
+      </div>
       <div class="project-meta">
         <div class="meta-item">
           <i class="fas fa-users"></i>
-          <span data-i18n="teamSize">Takım: 3 Kişi</span>
+          <span data-i18n="teamSize">Takım: 1 Kişi</span>
         </div>
         <div class="meta-item">
           <i class="fas fa-user"></i>
@@ -54,18 +55,12 @@
         </div>
         <div class="meta-item">
           <i class="fas fa-calendar"></i>
-          <span data-i18n="year2023">2023</span>
+          <span data-i18n="year2025">2025</span>
         </div>
         <div class="meta-item">
           <i class="fas fa-gamepad"></i>
-          <span data-i18n="mobileGame">Mobil Oyun</span>
+          <span data-i18n="mobileGame">Hyper Casual</span>
         </div>
-      </div>
-      <div class="project-actions">
-        <a href="https://github.com/duhanayan/stack-game" target="_blank" rel="noopener noreferrer" class="github-button">
-          <i class="fab fa-github"></i>
-          <span data-i18n="viewSource">Kaynak Kodu Görüntüle</span>
-        </a>
       </div>
     </div>
 
@@ -141,6 +136,13 @@
       </div>
     </div>
 
+    <div class="project-actions">
+      <a href="https://github.com/duhanayan/stack-game" target="_blank" rel="noopener noreferrer" class="github-button">
+        <i class="fab fa-github"></i>
+        <span data-i18n="viewSource">Kaynak Kodu Görüntüle</span>
+      </a>
+    </div>
+
     <div class="project-section">
       <h3 data-i18n="projectOverview">Proje Genel Bakış</h3>
       <p data-i18n="stackOverview">Stack, popüler mobil oyun Stack'ın klon versiyonudur. Unity ile geliştirilen bu proje, oyuncuların blokları üst üste dizerek yüksek kuleler inşa etmelerini sağlar. Oyun, basit ama bağımlılık yapıcı mekaniklerle oyuncuları uzun süre oyunda tutmayı hedefler.</p>
@@ -148,47 +150,208 @@
 
     <div class="project-section">
       <h3 data-i18n="myRole">Rolüm ve Sorumluluklar</h3>
-      <ul>
-        <li data-i18n="stackRole1">Ana oyun mekaniklerinin programlanması (blok yerleştirme, fizik sistemi)</li>
-        <li data-i18n="stackRole2">UI/UX sisteminin tasarımı ve implementasyonu</li>
-        <li data-i18n="stackRole3">Skor sistemi ve ilerleme mekanizmaları</li>
-        <li data-i18n="stackRole4">Mobil optimizasyon ve performans iyileştirmeleri</li>
-        <li data-i18n="stackRole5">Ses efektleri ve müzik entegrasyonu</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-      <h3 data-i18n="technicalDetails">Teknik Detaylar</h3>
-      <div class="tech-stack">
-        <span class="tech-tag">Unity</span>
-        <span class="tech-tag">C#</span>
-        <span class="tech-tag">Mobile Development</span>
-        <span class="tech-tag">Physics System</span>
-        <span class="tech-tag">UI/UX</span>
-        <span class="tech-tag">Audio Integration</span>
+      <div class="role-cards">
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-gamepad"></i>
+            <h4 data-i18n="gameMechanics">Oyun Mekanikleri & Fizik</h4>
+          </div>
+          <p data-i18n="stackRole1">Mükemmel vuruş sistemi (0.05f tolerans) geliştirdim ve değişken X/Z hareketi ile dilim kesme algoritması tasarladım. Unity Rigidbody, BoxCollider ve sürekli çarpışma algılama ile gerçekçi fizik simülasyonu oluşturdum.</p>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h4 data-i18n="mobileOptimization">Performans Optimizasyonu</h4>
+          </div>
+          <p data-i18n="stackRole4">Nesne havuzlama ile sıfıra yakın Instantiate sistemi kurarak, manuel bellek yönetimi (Çöp Toplayıcı) gerçekleştirdim. CPU ani artışlarını %70 azaltarak, maksimum 60 FPS hedefi ile platformlar arası performans sağladım.</p>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-palette"></i>
+            <h4 data-i18n="uiuxDesign">UI/UX & Görsel Sistem</h4>
+          </div>
+          <p data-i18n="stackRole2">TextMeshPro ile modern arayüz tasarladım ve DOTween animasyonları (solma, hareket geçişleri) ekledim. HSV interpolasyonu ile arka plan ve dilim renk senkronizasyonu sağlayarak sürükleyici görsel deneyim oluşturdum.</p>
+        </div>
+        
+        <div class="role-card">
+          <div class="role-card-header">
+            <i class="fas fa-trophy"></i>
+            <h4 data-i18n="scoringSystem">Skor & Motivasyon Sistemi</h4>
+          </div>
+          <p data-i18n="stackRole3">PlayerPrefs ile yüksek skor kaydetme sistemi kurarak, gerçek zamanlı skor takibi ve yeni rekor algılama sistemi geliştirdim. Ses geri bildirimi ve motivasyonel oyun döngüsü ile oyuncu tutma mekanizması oluşturdum.</p>
+        </div>
       </div>
-      <p data-i18n="stackTechDetails">Proje Unity 2022.3 LTS kullanılarak geliştirildi. Özel fizik sistemi, responsive UI tasarımı ve mobil platform optimizasyonları içerir. Oyun, farklı ekran boyutlarında sorunsuz çalışacak şekilde tasarlandı.</p>
     </div>
 
     <div class="project-section">
-      <h3 data-i18n="challenges">Karşılaşılan Zorluklar</h3>
-      <ul>
-        <li data-i18n="stackChallenge1">Blok yerleştirme mekaniklerinin hassas kontrolü</li>
-        <li data-i18n="stackChallenge2">Farklı cihazlarda tutarlı performans sağlama</li>
-        <li data-i18n="stackChallenge3">Oyuncu deneyimini optimize etme</li>
-        <li data-i18n="stackChallenge4">Mobil platform kısıtlamalarını aşma</li>
-      </ul>
+      <h3 data-i18n="technicalDetails">Teknik Yetenekler</h3>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-cogs"></i>
+            <h4 data-i18n="developmentPlatform">Unity & C# Geliştirme</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Unity 6</span>
+            <span class="tech-tag">C# 8.0+</span>
+            <span class="tech-tag">DOTween</span>
+          </div>
+          <p data-i18n="platformDetails">Unity 6 ile modern C# özelliklerini kullanarak geliştirme yaptım. DOTween ile performanslı animasyon işlemleri (arayüz solma, hareket geçişleri, zamanlayıcılar) gerçekleştirerek yumuşak kullanıcı deneyimi sağladım.</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-code"></i>
+            <h4 data-i18n="architecture">Modüler Mimari & Design Patterns</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Singleton Pattern</span>
+            <span class="tech-tag">Event-Driven</span>
+            <span class="tech-tag">Clean Code</span>
+            <span class="tech-tag">Extensibility</span>
+          </div>
+          <p data-i18n="architectureDetails">Singleton servis katmanı (Ses, Arayüz, Skor) tasarladım ve olay tabanlı iletişim sistemi kurduk. Yüksek okunabilirlik, Temiz Kod prensipleri ve birim testine uygun metot tasarımı gerçekleştirdim.</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-mobile"></i>
+            <h4 data-i18n="mobileDevelopment">Mobil & Cross-Platform</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Touch Input</span>
+            <span class="tech-tag">Cross-Platform</span>
+            <span class="tech-tag">60 FPS Target</span>
+            <span class="tech-tag">Responsive Design</span>
+          </div>
+          <p data-i18n="mobileDetails">Dokunma girişi optimizasyonu yaparak platformlar arası uyumluluk sağladım. 60 FPS hedefi ile performans garantisi vererek duyarlı arayüz tasarımı gerçekleştirdim.</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <i class="fas fa-memory"></i>
+            <h4 data-i18n="memoryManagement">Bellek & Performans Yönetimi</h4>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Object Pooling</span>
+            <span class="tech-tag">Inactive Object Optimization</span>
+            <span class="tech-tag">Garbage Collector</span>
+            <span class="tech-tag">CPU Optimization</span>
+          </div>
+          <p data-i18n="memoryDetails">500 dilim nesne havuzlama ile bellek sızıntısı önleme sistemi kurduk. Görünmeyen nesneleri devre dışı bırakarak, manuel çöp toplayıcı ile CPU ani artışlarını %70 azalttım.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="challenges">Problem Çözme & Zorluklar</h3>
+      <div class="challenge-cards">
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-crosshairs"></i>
+            <h4 data-i18n="precisionControl">Hassas Oyun Mekanikleri</h4>
+          </div>
+          <p data-i18n="stackChallenge1">0.05f taşma toleransı ile mükemmel vuruş sistemini uyguladım. Değişken X/Z hareket koordinasyonu ve dilim kesme algoritmasının hassas çalışmasını sağladım.</p>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4 data-i18n="performanceOptimization">FPS Düşüşleri & Performans</h4>
+          </div>
+          <p data-i18n="stackChallenge2">Gerçek zamanlı kesme & düşen dilim instantiate işlemlerinin FPS'i etkilemesi sorununu çözdüm. Nesne havuzlama ile CPU ani artışlarını %70 azaltarak, 60 FPS hedefini korudum.</p>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-camera"></i>
+            <h4 data-i18n="cameraSystem">Kamera Takibi & Animasyon</h4>
+          </div>
+          <p data-i18n="stackChallenge6">CameraController ile dinamik hedef yüksekliğine yumuşak geçiş animasyonu tasarladım. DOTween ile 0.48s ease-out-circ animasyonu kullanarak 'ani geçiş' hissini ortadan kaldırdım.</p>
+        </div>
+        
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <i class="fas fa-palette"></i>
+            <h4 data-i18n="colorSynchronization">Renk Senkronizasyonu</h4>
+          </div>
+          <p data-i18n="stackChallenge7">Arka plan ve dilim renklerinin uyumsuz geçişlerinden kaçınmak için BackgroundColor sınıfında HSV interpolasyonu kullandım. 12 renk paleti ile gradyan geçişler sağladım.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h3 data-i18n="developmentProcess">Geliştirme Süreci</h3>
+      <div class="process-cards">
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-code-branch"></i>
+            <h4 data-i18n="versionControl">Versiyon Kontrolü</h4>
+          </div>
+          <p data-i18n="versionControlDetails">Git ile özellik-dal yapısında çalışarak, kod bütünlüğünü korudum. Proje yönetimi ve versiyon kontrolü ile güvenli geliştirme süreci oluşturdum.</p>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-cogs"></i>
+            <h4 data-i18n="codeQuality">Kod Kalitesi</h4>
+          </div>
+          <p data-i18n="codeQualityDetails">Yüksek okunabilirlik ve Temiz Kod prensipleri uyguladım. Genişletilebilirlik için arayüzler tasarlayarak, birim testine uygun metot tasarımı ile sürdürülebilir kod yapısı oluşturdum.</p>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-user"></i>
+            <h4 data-i18n="soloDevelopment">Tek Kişilik Geliştirme</h4>
+          </div>
+          <p data-i18n="soloDevelopmentDetails">Tüm proje süreçlerini tek başıma yönettim. Sistem tasarımından kod yazımına, test ve optimizasyona kadar her aşamayı kendim gerçekleştirdim.</p>
+        </div>
+        
+        <div class="process-card">
+          <div class="process-card-header">
+            <i class="fas fa-rocket"></i>
+            <h4 data-i18n="projectDelivery">Proje Teslimi</h4>
+          </div>
+          <p data-i18n="projectDeliveryDetails">2023 yılında başarıyla tamamladım. Test kullanıcılarından olumlu geri bildirimler aldım, mobil platformlarda sorunsuz performans ve oyuncu memnuniyeti sağladım.</p>
+        </div>
+      </div>
     </div>
 
     <div class="project-section">
       <h3 data-i18n="results">Sonuçlar</h3>
-      <p data-i18n="stackResults">Proje başarıyla tamamlandı ve test kullanıcılarından olumlu geri bildirimler alındı. Oyun mekanikleri akıcı çalışıyor ve mobil platformlarda sorunsuz performans gösteriyor. Proje, Unity ile mobil oyun geliştirme konusunda değerli deneyim kazandırdı.</p>
+      <p data-i18n="stackResults">Proje başarıyla tamamlandı ve test kullanıcılarından olumlu geri bildirimler aldım. Oyun mekanikleri akıcı çalışıyor ve mobil platformlarda sorunsuz performans gösteriyor. Proje, Unity ile mobil oyun geliştirme konusunda değerli deneyim kazandırdı.</p>
     </div>
   </main>
 
   <script src="../js/lang-switcher.js"></script>
-  
+  <script src="../js/translations/stack.js"></script>
   <script>
+    // Stack page translation handler
+    function updateStackTranslations(language) {
+      const translations = stackTranslations[language];
+      
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[key]) {
+          element.textContent = translations[key];
+        }
+      });
+    }
+    
+    // Listen for language changes
+    window.addEventListener('languageChanged', (event) => {
+      updateStackTranslations(event.detail.language);
+    });
+    
+    // Initialize translations on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentLang = getCurrentLanguage();
+      updateStackTranslations(currentLang);
+    });
+    
     // Gallery functionality
     document.addEventListener('DOMContentLoaded', function() {
       const mainImage = document.getElementById('mainImage');
