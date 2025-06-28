@@ -11,7 +11,7 @@ const translations = {
         
         // Hero section
         heroTitle: "Oyun Geliştiricisi",
-        heroSubtitle: "Performansa odaklı, oynanabilirliği yüksek oyunlar geliştiriyorum",
+        heroSubtitle: "Performansa odaklı, oynanabilirliği yüksek oyunlar geliştiriyorum.",
         name: "Duhan Ayan",
         gameDeveloper: "Oyun Geliştiricisi",
         unity: "Unity",
@@ -35,14 +35,13 @@ const translations = {
         
         // Projects section
         gameProj: "Oyun Projeleri",
-        projectsSubtitle: "Son geliştirdiğim oyun projeleri",
         viewProject: "Projeyi İncele",
         stack: "Stack",
         juicyMerge: "Juicy Merge",
         multiplayerArena: "Multiplayer Arena",
-        desc1: "Unity ile geliştirilen mobil oyun Stack'ın klon versiyonu",
-        juicyMergeDesc: "Meyveleri birleştirerek büyük meyveler oluşturduğunuz puzzle oyunu",
-        desc3: "Unity ile geliştirilen çok oyunculu arena oyunu",
+        desc1: "Ketchapp'in popüler Stack oyununun klon versiyonu. Oyun mekaniklerini sıfırdan tasarlayarak kendi yorumumla yeniden inşa ettim.",
+        juicyMergeDesc: "Meyveleri birleştirerek büyük meyveler oluşturduğunuz puzzle oyunu. Birleştirme mekaniklerini sıfırdan tasarladım.",
+        desc3: "Unity ile geliştirilen çok oyunculu arena oyunu.",
         puzzle: "Puzzle",
         multiplayer: "Çok Oyunculu",
         
@@ -68,7 +67,7 @@ const translations = {
         techStack: "Teknoloji Yığını",
         
         // Stack specific
-        stackOverview: "Stack, popüler mobil oyun Stack'ın klon versiyonudur. Unity ile geliştirilen bu proje, oyuncuların blokları üst üste dizerek yüksek kuleler inşa etmelerini sağlar. Oyun, basit ama bağımlılık yapıcı mekaniklerle oyuncuları uzun süre oyunda tutmayı hedefler.",
+        stackOverview: "Stack, Ketchapp'in popüler mobil oyunlarından biridir. Bu oyun, oyuncuların blokları üst üste dizerek yüksek kuleler inşa etmelerini sağlar. Basit ama bağımlılık yapıcı mekaniklerle oyuncuları uzun süre oyunda tutmayı hedefler. Oyunun temel mekaniğini sıfırdan tasarlayarak kendi yorumumla yeniden inşa ettiğim bir klon çalışmasıdır.",
         gameMechanics: "Oyun Mekanikleri & Fizik",
         mobileOptimization: "Performans Optimizasyonu",
         uiuxDesign: "UI/UX & Görsel Sistem",
@@ -83,29 +82,55 @@ const translations = {
         projectDelivery: "Proje Teslimi",
         
         // Stack roles
-        stackRole1: "• Mükemmel vuruş sistemi (0.05f tolerans) geliştirdim ve değişken X/Z hareketi ile dilim kesme algoritması tasarladım<br>• Unity Rigidbody, BoxCollider ve sürekli çarpışma algılama ile gerçekçi fizik simülasyonu oluşturdum",
-        stackRole2: "• TextMeshPro ile modern arayüz tasarladım ve DOTween animasyonları (solma, hareket geçişleri) ekledim<br>• HSV interpolasyonu ile arka plan ve dilim renk senkronizasyonu sağlayarak sürükleyici görsel deneyim oluşturdum",
-        stackRole3: "• PlayerPrefs ile yüksek skor kaydetme sistemi kurarak, gerçek zamanlı skor takibi ve yeni rekor algılama sistemi geliştirdim<br>• Ses geri bildirimi ve motivasyonel oyun döngüsü ile oyuncu tutma mekanizması oluşturdum",
-        stackRole4: "• Nesne havuzlama ile sıfıra yakın Instantiate sistemi kurarak, manuel bellek yönetimi (Çöp Toplayıcı) gerçekleştirdim<br>• CPU ani artışlarını %70 azaltarak, maksimum 60 FPS hedefi ile platformlar arası performans sağladım",
+        stackRole1: "• Mükemmel vuruş sistemi (0.05f tolerans) geliştirdim ve değişken X/Z hareketi ile dilim kesme algoritması tasarladım.<br>• Unity Rigidbody, BoxCollider ve sürekli çarpışma algılama ile gerçekçi fizik simülasyonu oluşturdum.",
+        stackRole2: "• TextMeshPro ile modern arayüz tasarladım ve DOTween animasyonları (solma, hareket geçişleri) ekledim.<br>• HSV interpolasyonu ile arka plan ve dilim renk senkronizasyonu sağlayarak sürükleyici görsel deneyim oluşturdum.",
+        stackRole3: "• PlayerPrefs ile yüksek skor kaydetme sistemi kurarak, gerçek zamanlı skor takibi ve yeni rekor algılama sistemi geliştirdim.<br>• Ses geri bildirimi ve motivasyonel oyun döngüsü ile oyuncu tutma mekanizması oluşturdum.",
+        stackRole4: "• Nesne havuzlama ile sıfıra yakın Instantiate sistemi kurarak, manuel bellek yönetimi (Çöp Toplayıcı) gerçekleştirdim.<br>• CPU ani artışlarını %70 azaltarak, maksimum 60 FPS hedefi ile platformlar arası performans sağladım.",
         
-        // Stack technical details
-        platformDetails: "• Unity 6 ile modern C# özelliklerini kullanarak geliştirme yaptım<br>• DOTween ile performanslı animasyon işlemleri (arayüz solma, hareket geçişleri, zamanlayıcılar) gerçekleştirerek yumuşak kullanıcı deneyimi sağladım",
-        architectureDetails: "• Singleton servis katmanı (Ses, Arayüz, Skor) tasarladım ve olay tabanlı iletişim sistemi kurduk<br>• Yüksek okunabilirlik, Temiz Kod prensipleri ve birim testine uygun metot tasarımı gerçekleştirdim",
-        mobileDetails: "• Dokunma girişi optimizasyonu yaparak platformlar arası uyumluluk sağladım<br>• 60 FPS hedefi ile performans garantisi vererek duyarlı arayüz tasarımı gerçekleştirdim",
-        memoryDetails: "• 500 dilim nesne havuzlama ile bellek sızıntısı önleme sistemi kurduk<br>• Görünmeyen nesneleri devre dışı bırakarak, manuel çöp toplayıcı ile CPU ani artışlarını %70 azalttım",
-        versionControlDetails: "• Git ile özellik-dal yapısında çalışarak, kod bütünlüğünü korudum<br>• Proje yönetimi ve versiyon kontrolü ile güvenli geliştirme süreci oluşturdum",
-        codeQualityDetails: "• Yüksek okunabilirlik ve Temiz Kod prensipleri uyguladım<br>• Genişletilebilirlik için arayüzler tasarlayarak, birim testine uygun metot tasarımı ile sürdürülebilir kod yapısı oluşturdum",
-        soloDevelopmentDetails: "• Tüm proje süreçlerini tek başıma yönettim<br>• Sistem tasarımından kod yazımına, test ve optimizasyona kadar her aşamayı kendim gerçekleştirdim",
-        projectDeliveryDetails: "• 2023 yılında başarıyla tamamladım<br>• Test kullanıcılarından olumlu geri bildirimler aldım, mobil platformlarda sorunsuz performans ve oyuncu memnuniyeti sağladım",
+        // Stack technical skills (new icon style)
+        stackTech1: "C# ile Unity oyun geliştirme ve nesne yönelimli programlama.",
+        stackTech2: "Unity 3D fizik motoru, Rigidbody ve Collider sistemleri.",
+        stackTech3: "Mobil platform optimizasyonu ve performans yönetimi.",
+        stackTech4: "UI/UX tasarımı ve animasyon sistemleri (DOTween).",
         
-        // Stack challenges
-        stackChallenge1: "• 0.05f taşma toleransı ile mükemmel vuruş sistemini uyguladım<br>• Değişken X/Z hareket koordinasyonu ve dilim kesme algoritmasının hassas çalışmasını sağladım",
-        stackChallenge2: "• Gerçek zamanlı kesme & düşen dilim instantiate işlemlerinin FPS'i etkilemesi sorununu çözdüm<br>• Nesne havuzlama ile CPU ani artışlarını %70 azaltarak, 60 FPS hedefini korudum",
-        stackChallenge6: "• CameraController ile dinamik hedef yüksekliğine yumuşak geçiş animasyonu tasarladım<br>• DOTween ile 0.48s ease-out-circ animasyonu kullanarak 'ani geçiş' hissini ortadan kaldırdım",
-        stackChallenge7: "• Arka plan ve dilim renklerinin uyumsuz geçişlerinden kaçınmak için BackgroundColor sınıfında HSV interpolasyonu kullandım<br>• 12 renk paleti ile gradyan geçişler sağladım",
+        // Stack architecture (new icon style)
+        stackArch1: "Singleton servis katmanı (Ses, Arayüz, Skor) tasarladım ve olay tabanlı iletişim sistemi kurduk.",
+        stackArch2: "Yüksek okunabilirlik, Temiz Kod prensipleri ve birim testine uygun metot tasarımı gerçekleştirdim.",
+        
+        // Stack mobile development (new icon style)
+        stackMobile1: "Dokunma girişi optimizasyonu yaparak platformlar arası uyumluluk sağladım.",
+        stackMobile2: "60 FPS hedefi ile performans garantisi vererek duyarlı arayüz tasarımı gerçekleştirdim.",
+        
+        // Stack memory management (new icon style)
+        stackMemory1: "500 dilim nesne havuzlama ile bellek sızıntısı önleme sistemi kurduk.",
+        stackMemory2: "Görünmeyen nesneleri devre dışı bırakarak, manuel çöp toplayıcı ile CPU ani artışlarını %70 azalttım.",
+        
+        // Stack challenges (new icon style)
+        stackChallenge1: "Mükemmel vuruş toleransı (0.05f) ile hassas dilim kesme algoritması geliştirmek.",
+        stackChallenge2: "Mobil cihazlarda 60 FPS performans hedefini korumak ve CPU kullanımını optimize etmek.",
+        stackChallenge3: "Farklı ekran boyutlarında tutarlı oyun deneyimi sağlamak.",
+        stackChallenge4: "Nesne havuzlama ile CPU ani artışlarını %70 azaltarak, 60 FPS hedefini korudum.",
+        
+        // Stack camera system (new icon style)
+        stackCamera1: "CameraController ile dinamik hedef yüksekliğine yumuşak geçiş animasyonu tasarladım.",
+        stackCamera2: "DOTween ile 0.48s ease-out-circ animasyonu kullanarak 'ani geçiş' hissini ortadan kaldırdım.",
+        
+        // Stack color synchronization (new icon style)
+        stackColor1: "Arka plan ve dilim renklerinin uyumsuz geçişlerinden kaçınmak için BackgroundColor sınıfında HSV interpolasyonu kullandım.",
+        stackColor2: "12 renk paleti ile gradyan geçişler sağladım.",
+        
+        // Stack development process (new icon style)
+        stackProcess1: "Git ile özellik-dal yapısında çalışarak, kod bütünlüğünü korudum.",
+        stackProcess2: "Proje yönetimi ve versiyon kontrolü ile güvenli geliştirme süreci oluşturdum.",
+        stackProcess3: "Yüksek okunabilirlik ve Temiz Kod prensipleri uyguladım.",
+        stackProcess4: "Genişletilebilirlik için arayüzler tasarlayarak, birim testine uygun metot tasarımı ile sürdürülebilir kod yapısı oluşturdum.",
+        stackProcess5: "Tüm proje süreçlerini tek başıma yönettim.",
+        stackProcess6: "Sistem tasarımından kod yazımına, test ve optimizasyona kadar her aşamayı kendim gerçekleştirdim.",
+        stackProcess7: "2025 yılında başarıyla tamamladım.",
+        stackProcess8: "Test kullanıcılarından olumlu geri bildirimler aldım, mobil platformlarda sorunsuz performans ve oyuncu memnuniyeti sağladım.",
         
         // Stack results
-        stackResults: "• Proje başarıyla tamamlandı ve test kullanıcılarından olumlu geri bildirimler aldım<br>• Oyun mekanikleri akıcı çalışıyor ve mobil platformlarda sorunsuz performans gösteriyor<br>• Proje, Unity ile mobil oyun geliştirme konusunda değerli deneyim kazandırdı",
+        stackResults: "• Proje başarıyla tamamlandı ve test kullanıcılarından olumlu geri bildirimler aldım.<br>• Oyun mekanikleri akıcı çalışıyor ve mobil platformlarda sorunsuz performans gösteriyor.<br>• Proje, Unity ile mobil oyun geliştirme konusunda değerli deneyim kazandırdı.",
         
         // Juicy Merge specific
         juicyMergeOverview: "Juicy Merge, Google Play Store'da 10M+ indirme ve 4.4 yıldız puanına sahip popüler \"Fruit Merge: Juicy Drop Game\" oyununun klon versiyonudur. Aynı meyveleri birleştirerek daha büyük meyveler oluşturduğunuz bağımlılık yapıcı puzzle oyunu. Unity ile geliştirilen bu proje, sürükle-bırak mekanikleri, stratejik oynanış ve renkli görsel efektlerle oyuncuları uzun süre oyunda tutmayı hedefler.",
@@ -118,25 +143,53 @@ const translations = {
         dataManagement: "Veri Yönetimi",
         
         // Juicy Merge roles
-        juicyMergeRole1: "• 12 farklı meyve türü (Kiraz'dan Karpuz'a) ile enum tabanlı tip sistemi geliştirdim<br>• Çarpışma algılama ile otomatik birleştirme sistemi kurarak, InstanceID kontrolü ile çift birleştirme sorununu çözdüm<br>• Fare tabanlı sürükle-bırak mekanikleri ve doğurma bekleme süresi sistemi ekledim",
-        juicyMergeRole2: "• TextMeshPro ile modern arayüz tasarladım ve birleştirme animasyonları için parçacık efektleri ekledim<br>• Renk kodlu doğurma efektleri ve hamle sayacı gösterimi ile oyuncu deneyimini geliştirdim<br>• Yüksek skor takibi ve yeniden başlatma işlevselliği ile oyun sonu ekranı oluşturdum",
-        juicyMergeRole3: "• Meyve türü tabanlı skor sistemi geliştirdim ve PlayerPrefs ile yüksek skor kalıcılığı sağladım<br>• Gerçek zamanlı skor gösterimi ve yeni rekor algılama sistemi ekledim<br>• Hamle sayacı takibi ve oyun sonu tetikleme sistemi ile oyun akışını tamamladım",
-        juicyMergeRole4: "• Unity ObjectPool ile bellek verimli meyve doğurma sistemi tasarladım<br>• 120 FPS hedef kare hızı için collectionCheck: false ile performans optimizasyonu yaptım<br>• Meyve Havuzu konteyneri ile düzenli nesne yönetimi ve otomatik temizlik sistemi kurduk",
+        juicyMergeRole1: "• 12 farklı meyve türü (Kiraz'dan Karpuz'a) ile enum tabanlı tip sistemi geliştirdim.<br>• Çarpışma algılama ile otomatik birleştirme sistemi kurarak, InstanceID kontrolü ile çift birleştirme sorununu çözdüm.<br>• Fare tabanlı sürükle-bırak mekanikleri ve doğurma bekleme süresi sistemi ekledim.",
+        juicyMergeRole2: "• TextMeshPro ile modern arayüz tasarladım ve birleştirme animasyonları için parçacık efektleri ekledim.<br>• Renk kodlu doğurma efektleri ve hamle sayacı gösterimi ile oyuncu deneyimini geliştirdim.<br>• Yüksek skor takibi ve yeniden başlatma işlevselliği ile oyun sonu ekranı oluşturdum.",
+        juicyMergeRole3: "• Meyve türü tabanlı skor sistemi geliştirdim ve PlayerPrefs ile yüksek skor kalıcılığı sağladım.<br>• Gerçek zamanlı skor gösterimi ve yeni rekor algılama sistemi ekledim.<br>• Hamle sayacı takibi ve oyun sonu tetikleme sistemi ile oyun akışını tamamladım.",
+        juicyMergeRole4: "• Unity ObjectPool ile bellek verimli meyve doğurma sistemi tasarladım.<br>• 120 FPS hedef kare hızı için collectionCheck: false ile performans optimizasyonu yaptım.<br>• Meyve Havuzu konteyneri ile düzenli nesne yönetimi ve otomatik temizlik sistemi kurduk.",
         
-        // Juicy Merge technical details
-        juicyPlatformDetails: "• Unity ObjectPool ile bellek yönetimi sistemini kurarak, enum tabanlı tip sistemi geliştirdim<br>• Rigidbody2D fiziği, çarpışma algılama ve singleton desen uygulaması ile oyun altyapısını oluşturdum",
-        juicyMobileDetails: "• Fare ve dokunma girişi işleme sistemini optimize ettim ve her meyve türü için Physics2D materyalleri hazırladım<br>• 120 FPS hedefi ile platformlar arası uyumluluk sağlayarak duyarlı arayüz tasarımı gerçekleştirdim",
-        juicyDataDetails: "• PlayerPrefs ile yüksek skor kalıcılığı sistemi kurarak, FruitSpawner için singleton desen uyguladım<br>• Nesne havuzlama ile verimli bellek yönetimi sağlayarak otomatik temizlik sistemi geliştirdim",
+        // Juicy Merge roles (new icon style)
+        juicyRole1: "12 farklı meyve türü (Kiraz'dan Karpuz'a) ile enum tabanlı tip sistemi geliştirdim.",
+        juicyRole2: "Çarpışma algılama ile otomatik birleştirme sistemi kurarak, InstanceID kontrolü ile çift birleştirme sorununu çözdüm.",
+        juicyRole3: "Dokunmatik giriş işleme sistemini optimize ettim ve her meyve türü için Physics2D materyalleri hazırladım.",
+        juicyRole4: "Unity ObjectPool ile bellek verimli meyve doğurma sistemi tasarladım.",
+        juicyRole5: "120 FPS hedef kare hızı için collectionCheck: false ile performans optimizasyonu yaptım.",
+        juicyRole6: "Meyve Havuzu konteyneri ile düzenli nesne yönetimi ve otomatik temizlik sistemi kurduk.",
+        juicyRole7: "TextMeshPro ile modern arayüz tasarladım ve birleştirme animasyonları için parçacık efektleri ekledim.",
+        juicyRole8: "Renk kodlu doğurma efektleri ve hamle sayacı gösterimi ile oyuncu deneyimini geliştirdim.",
+        juicyRole9: "Yüksek skor takibi ve yeniden başlatma işlevselliği ile oyun sonu ekranı oluşturdum.",
+        juicyRole10: "Meyve türü tabanlı skor sistemi geliştirdim ve PlayerPrefs ile yüksek skor kalıcılığı sağladım.",
+        juicyRole11: "Gerçek zamanlı skor gösterimi ve yeni rekor algılama sistemi ekledim.",
+        juicyRole12: "Hamle sayacı takibi ve oyun sonu tetikleme sistemi ile oyun akışını tamamladım.",
         
-        // Juicy Merge challenges
-        mergeChallenge: "• InstanceID kontrolü ile çift birleştirme sorununu çözdüm ve IsMerging flag'i ile race condition problemlerini giderdim<br>• Aynı meyve türü algılama sistemi geliştirerek otomatik birleştirme tetikleme mekanizması kurduk<br>• Physics2D çarpışma işleme sistemini optimize ettim",
-        performanceChallenge: "• Object Pooling ile memory leak sorunlarını önleyerek, 60 FPS hedefi için performans optimizasyonu gerçekleştirdim<br>• Koleksiyon kontrolünü devre dışı bırakarak verimli meyve oluşturma sistemi ve otomatik temizlik mekanizması geliştirdim",
-        visualChallenge: "• Particle System entegrasyonu ile renk kodlu meyve birleştirme efektleri oluşturdum<br>• Modern arayüz tasarımı ile oyun sonu ekranı ve yeniden başlatma işlevselliği geliştirdim",
+        // Juicy Merge technical skills (new icon style)
+        juicyTech1: "Unity ObjectPool ile bellek yönetimi sistemini kurarak, enum tabanlı tip sistemi geliştirdim.",
+        juicyTech2: "Rigidbody2D fiziği, çarpışma algılama ve singleton desen uygulaması ile oyun altyapısını oluşturdum.",
         
-        // Juicy Merge process
-        conceptProcess: "• Orijinal Fruit Merge oyununu detaylı analiz ederek, 12 meyve türü enum tasarımı gerçekleştirdim<br>• Physics2D materyal sistemi planlaması yaparak, Object Pooling mimarisi ve Singleton desen uygulaması ile proje altyapısını oluşturdum",
-        coreProcess: "• FruitSpawner singleton yapısını kurarak, ObjectPool uygulaması ve çarpışma algılama sistemi geliştirdim<br>• ScoreManager, GameEnderScript ve FPSDisplay bileşenlerini oluşturarak Physics2D materyalleri kurulumunu tamamladım",
-        polishProcess: "• 60 FPS optimizasyonu gerçekleştirerek, Particle System entegrasyonu ve arayüz iyileştirme çalışmaları yaptım<br>• Performans testi, memory leak önleme ve platformlar arası test süreçlerini tamamladım",
+        // Juicy Merge mobile development (new icon style)
+        juicyMobile1: "Dokunmatik giriş işleme sistemini optimize ettim ve her meyve türü için Physics2D materyalleri hazırladım.",
+        juicyMobile2: "120 FPS hedefi ile platformlar arası uyumluluk sağlayarak duyarlı arayüz tasarımı gerçekleştirdim.",
+        
+        // Juicy Merge data management (new icon style)
+        juicyData1: "PlayerPrefs ile yüksek skor kalıcılığı sistemi kurarak, FruitSpawner için singleton desen uyguladım.",
+        juicyData2: "Nesne havuzlama ile verimli bellek yönetimi sağlayarak otomatik temizlik sistemi geliştirdim.",
+        
+        // Juicy Merge challenges (new icon style)
+        juicyChallenge1: "InstanceID kontrolü ile çift birleştirme sorununu çözdüm ve IsMerging flag'i ile race condition problemlerini giderdim.",
+        juicyChallenge2: "Aynı meyve türü algılama sistemi geliştirerek otomatik birleştirme tetikleme mekanizması kurduk.",
+        juicyChallenge3: "Physics2D çarpışma işleme sistemini optimize ettim.",
+        juicyChallenge4: "Object Pooling ile memory leak sorunlarını önleyerek, 60 FPS hedefi için performans optimizasyonu gerçekleştirdim.",
+        juicyChallenge5: "Koleksiyon kontrolünü devre dışı bırakarak verimli meyve oluşturma sistemi ve otomatik temizlik mekanizması geliştirdim.",
+        juicyChallenge6: "Particle System entegrasyonu ile renk kodlu meyve birleştirme efektleri oluşturdum.",
+        juicyChallenge7: "Modern arayüz tasarımı ile oyun sonu ekranı ve yeniden başlatma işlevselliği geliştirdim.",
+        
+        // Juicy Merge development process (new icon style)
+        juicyProcess1: "Orijinal Fruit Merge oyununu detaylı analiz ederek, 12 meyve türü enum tasarımı gerçekleştirdim.",
+        juicyProcess2: "Physics2D materyal sistemi planlaması yaparak, Object Pooling mimarisi ve Singleton desen uygulaması ile proje altyapısını oluşturdum.",
+        juicyProcess3: "FruitSpawner singleton yapısını kurarak, ObjectPool uygulaması ve çarpışma algılama sistemi geliştirdim.",
+        juicyProcess4: "ScoreManager, GameEnderScript ve FPSDisplay bileşenlerini oluşturarak Physics2D materyalleri kurulumunu tamamladım.",
+        juicyProcess5: "60 FPS optimizasyonu gerçekleştirerek, Particle System entegrasyonu ve arayüz iyileştirme çalışmaları yaptım.",
+        juicyProcess6: "Performans testi, memory leak önleme ve platformlar arası test süreçlerini tamamladım.",
         
         // Gallery captions
         mainMenu: "Ana Menü Ekranı",
@@ -154,7 +207,7 @@ const translations = {
         
         // Hero section
         heroTitle: "Game Developer",
-        heroSubtitle: "I develop performance-focused, highly playable games",
+        heroSubtitle: "I develop performance-focused, highly playable games.",
         name: "Duhan Ayan",
         gameDeveloper: "Game Developer",
         unity: "Unity",
@@ -178,14 +231,13 @@ const translations = {
         
         // Projects section
         gameProj: "Game Projects",
-        projectsSubtitle: "Recently developed game projects",
         viewProject: "View Project",
         stack: "Stack",
         juicyMerge: "Juicy Merge",
         multiplayerArena: "Multiplayer Arena",
-        desc1: "Clone version of the mobile game Stack developed with Unity",
-        juicyMergeDesc: "Puzzle game where you combine fruits to create larger fruits",
-        desc3: "Multiplayer arena game developed with Unity",
+        desc1: "A clone of Ketchapp's popular Stack game. I redesigned the game mechanics from scratch with my own interpretation.",
+        juicyMergeDesc: "Puzzle game where you combine fruits to create larger fruits. I redesigned the merge mechanics from scratch.",
+        desc3: "Multiplayer arena game developed with Unity.",
         puzzle: "Puzzle",
         multiplayer: "Multiplayer",
         
@@ -211,7 +263,7 @@ const translations = {
         techStack: "Tech Stack",
         
         // Stack specific
-        stackOverview: "Stack is a clone version of the popular mobile game Stack. Developed with Unity, this project allows players to build high towers by stacking blocks on top of each other. The game aims to keep players engaged for long periods with simple but addictive mechanics.",
+        stackOverview: "Stack is one of Ketchapp's popular mobile games. This game allows players to build high towers by stacking blocks on top of each other. It aims to keep players engaged for long periods with simple but addictive mechanics. It's a clone project where I redesigned the core mechanics from scratch with my own interpretation.",
         gameMechanics: "Game Mechanics & Physics",
         mobileOptimization: "Performance Optimization",
         uiuxDesign: "UI/UX & Visual System",
@@ -226,29 +278,55 @@ const translations = {
         projectDelivery: "Project Delivery",
         
         // Stack roles
-        stackRole1: "• Developed perfect hit system (0.05f tolerance) and designed slice cutting algorithm with variable X/Z movement<br>• Created realistic physics simulation with Unity Rigidbody, BoxCollider and continuous collision detection",
-        stackRole2: "• Designed modern interface with TextMeshPro and added DOTween animations (fade, movement transitions)<br>• Created immersive visual experience with HSV interpolation for background and slice color synchronization",
-        stackRole3: "• Established high score saving system with PlayerPrefs, developed real-time score tracking and new record detection system<br>• Created player retention mechanism with audio feedback and motivational game loop",
-        stackRole4: "• Established near-zero Instantiate system with object pooling, performed manual memory management (Garbage Collector)<br>• Reduced CPU spikes by 70%, achieved cross-platform performance with maximum 60 FPS target",
+        stackRole1: "• Developed perfect hit system (0.05f tolerance) and designed slice cutting algorithm with variable X/Z movement.<br>• Created realistic physics simulation with Unity Rigidbody, BoxCollider and continuous collision detection.",
+        stackRole2: "• Designed modern interface with TextMeshPro and added DOTween animations (fade, movement transitions).<br>• Created immersive visual experience with HSV interpolation for background and slice color synchronization.",
+        stackRole3: "• Established high score saving system with PlayerPrefs, developed real-time score tracking and new record detection system.<br>• Created player retention mechanism with audio feedback and motivational game loop.",
+        stackRole4: "• Established near-zero Instantiate system with object pooling, performed manual memory management (Garbage Collector).<br>• Reduced CPU spikes by 70%, achieved cross-platform performance with maximum 60 FPS target.",
         
-        // Stack technical details
-        platformDetails: "• Developed using Unity 6 with modern C# features<br>• Achieved smooth user experience with DOTween for performance animation operations (interface fade, movement transitions, timers)",
-        architectureDetails: "• Designed singleton service layer (Audio, UI, Score) and established event-driven communication system<br>• Achieved high readability, Clean Code principles and unit test-friendly method design",
-        mobileDetails: "• Optimized touch input for cross-platform compatibility<br>• Achieved responsive interface design with 60 FPS target performance guarantee",
-        memoryDetails: "• Established memory leak prevention system with 500 slice object pooling<br>• Reduced CPU spikes by 70% by disabling invisible objects and manual garbage collector",
-        versionControlDetails: "• Maintained code integrity by working with feature-branch structure in Git<br>• Created secure development process with project management and version control",
-        codeQualityDetails: "• Applied high readability and Clean Code principles<br>• Created sustainable code structure with interfaces designed for extensibility and unit test-friendly method design",
-        soloDevelopmentDetails: "• Managed all project processes alone<br>• Performed every stage from system design to coding, testing and optimization myself",
-        projectDeliveryDetails: "• Successfully completed in 2023<br>• Received positive feedback from test users, achieved seamless performance and player satisfaction on mobile platforms",
+        // Stack technical skills (new icon style)
+        stackTech1: "C# ile Unity game development and object-oriented programming.",
+        stackTech2: "Unity 3D physics engine, Rigidbody and Collider systems.",
+        stackTech3: "Mobile platform optimization and performance management.",
+        stackTech4: "UI/UX design and animation systems (DOTween).",
         
-        // Stack challenges
-        stackChallenge1: "• Implemented perfect hit system with 0.05f overflow tolerance<br>• Ensured precise operation of variable X/Z movement coordination and slice cutting algorithm",
-        stackChallenge2: "• Solved the problem of real-time cutting & falling slice instantiate operations affecting FPS<br>• Maintained 60 FPS target by reducing CPU spikes by 70% with object pooling",
-        stackChallenge6: "• Designed smooth transition animation to dynamic target height with CameraController<br>• Eliminated 'sudden transition' feeling using DOTween with 0.48s ease-out-circ animation",
-        stackChallenge7: "• Used HSV interpolation in BackgroundColor class to avoid inconsistent transitions between background and slice colors<br>• Provided gradient transitions with 12 color palette",
+        // Stack architecture (new icon style)
+        stackArch1: "Designed singleton service layer (Audio, UI, Score) and established event-driven communication system.",
+        stackArch2: "Achieved high readability, Clean Code principles and unit test-friendly method design.",
+        
+        // Stack mobile development (new icon style)
+        stackMobile1: "Optimized touch input for cross-platform compatibility.",
+        stackMobile2: "Achieved responsive interface design with 60 FPS target performance guarantee.",
+        
+        // Stack memory management (new icon style)
+        stackMemory1: "Established memory leak prevention system with 500 slice object pooling.",
+        stackMemory2: "Reduced CPU spikes by 70% by disabling invisible objects and manual garbage collector.",
+        
+        // Stack challenges (new icon style)
+        stackChallenge1: "Develop perfect hit system with 0.05f overflow tolerance.",
+        stackChallenge2: "Maintain 60 FPS target and optimize CPU usage on mobile devices.",
+        stackChallenge3: "Ensure consistent gameplay experience across different screen sizes.",
+        stackChallenge4: "Maintained 60 FPS target by reducing CPU spikes by 70% with object pooling.",
+        
+        // Stack camera system (new icon style)
+        stackCamera1: "Designed smooth transition animation to dynamic target height with CameraController.",
+        stackCamera2: "Eliminated 'sudden transition' feeling using DOTween with 0.48s ease-out-circ animation.",
+        
+        // Stack color synchronization (new icon style)
+        stackColor1: "Used HSV interpolation in BackgroundColor class to avoid inconsistent transitions between background and slice colors.",
+        stackColor2: "Provided gradient transitions with 12 color palette.",
+        
+        // Stack development process (new icon style)
+        stackProcess1: "Maintained code integrity by working with feature-branch structure in Git.",
+        stackProcess2: "Created secure development process with project management and version control.",
+        stackProcess3: "Applied high readability and Clean Code principles.",
+        stackProcess4: "Created sustainable code structure with interfaces designed for extensibility and unit test-friendly method design.",
+        stackProcess5: "Managed all project processes alone.",
+        stackProcess6: "Performed every stage from system design to coding, testing and optimization myself.",
+        stackProcess7: "Successfully completed in 2025.",
+        stackProcess8: "Received positive feedback from test users, achieved seamless performance and player satisfaction on mobile platforms.",
         
         // Stack results
-        stackResults: "• Project was successfully completed and received positive feedback from test users<br>• Game mechanics work smoothly and show seamless performance on mobile platforms<br>• The project provided valuable experience in Unity mobile game development",
+        stackResults: "• Project was successfully completed and received positive feedback from test users.<br>• Game mechanics work smoothly and show seamless performance on mobile platforms.<br>• The project provided valuable experience in Unity mobile game development.",
         
         // Juicy Merge specific
         juicyMergeOverview: "Juicy Merge is a clone version of the popular \"Fruit Merge: Juicy Drop Game\" with 10M+ downloads and 4.4 star rating on Google Play Store. It's an addictive puzzle game where you combine same fruits to create larger fruits. Developed with Unity, this project aims to keep players engaged for long periods with drag-and-drop mechanics, strategic gameplay and colorful visual effects.",
@@ -261,25 +339,53 @@ const translations = {
         dataManagement: "Data Management",
         
         // Juicy Merge roles
-        juicyMergeRole1: "• Developed enum-based type system with 12 different fruit types (from Cherry to Watermelon)<br>• Established automatic merge system with collision detection, solved double merge problem with InstanceID control<br>• Added mouse-based drag-and-drop mechanics and spawn waiting time system",
-        juicyMergeRole2: "• Designed modern interface with TextMeshPro and added particle effects for merge animations<br>• Enhanced player experience with color-coded spawn effects and move counter display<br>• Created game over screen with high score tracking and restart functionality",
-        juicyMergeRole3: "• Developed fruit type-based scoring system and ensured high score persistence with PlayerPrefs<br>• Added real-time score display and new record detection system<br>• Completed game flow with move counter tracking and game end triggering system",
-        juicyMergeRole4: "• Designed memory-efficient fruit spawning system with Unity ObjectPool<br>• Performed performance optimization with collectionCheck: false for 120 FPS target frame rate<br>• Established organized object management and automatic cleanup system with Fruit Pool container",
+        juicyMergeRole1: "• Developed enum-based type system with 12 different fruit types (from Cherry to Watermelon).<br>• Established automatic merge system with collision detection, solved double merge issue with InstanceID control.<br>• Added mouse-based drag-drop mechanics and spawn waiting time system.",
+        juicyMergeRole2: "• Designed modern interface with TextMeshPro and added particle effects for merge animations.<br>• Enhanced player experience with color-coded spawn effects and move counter display.<br>• Created game over screen with high score tracking and restart functionality.",
+        juicyMergeRole3: "• Developed fruit type-based scoring system and ensured high score persistence with PlayerPrefs.<br>• Added real-time score display and new record detection system.<br>• Completed game flow with move counter tracking and game end trigger system.",
+        juicyMergeRole4: "• Designed memory-efficient fruit spawning system with Unity ObjectPool.<br>• Performed performance optimization with collectionCheck: false for 120 FPS target frame rate.<br>• Established organized object management and automatic cleanup system with Fruit Pool container.",
         
-        // Juicy Merge technical details
-        juicyPlatformDetails: "• Established memory management system with Unity ObjectPool and developed enum-based type system<br>• Created game infrastructure with Rigidbody2D physics, collision detection and singleton pattern implementation",
-        juicyMobileDetails: "• Optimized mouse and touch input processing system and prepared Physics2D materials for each fruit type<br>• Achieved responsive interface design with cross-platform compatibility at 120 FPS target",
-        juicyDataDetails: "• Established high score persistence system with PlayerPrefs and applied singleton pattern for FruitSpawner<br>• Developed automatic cleanup system with efficient memory management through object pooling",
+        // Juicy Merge roles (new icon style)
+        juicyRole1: "Developed enum-based type system with 12 different fruit types (from Cherry to Watermelon).",
+        juicyRole2: "Established automatic merge system with collision detection, solved double merge issue with InstanceID control.",
+        juicyRole3: "Optimized touch input processing system and prepared Physics2D materials for each fruit type.",
+        juicyRole4: "Designed memory-efficient fruit spawning system with Unity ObjectPool.",
+        juicyRole5: "Performed performance optimization with collectionCheck: false for 120 FPS target frame rate.",
+        juicyRole6: "Established organized object management and automatic cleanup system with Fruit Pool container.",
+        juicyRole7: "Designed modern interface with TextMeshPro and added particle effects for merge animations.",
+        juicyRole8: "Enhanced player experience with color-coded spawn effects and move counter display.",
+        juicyRole9: "Created game over screen with high score tracking and restart functionality.",
+        juicyRole10: "Developed fruit type-based scoring system and ensured high score persistence with PlayerPrefs.",
+        juicyRole11: "Added real-time score display and new record detection system.",
+        juicyRole12: "Completed game flow with move counter tracking and game end trigger system.",
         
-        // Juicy Merge challenges
-        mergeChallenge: "• Solved double merge problem with InstanceID control and eliminated race condition problems with IsMerging flag<br>• Established automatic merge triggering mechanism by developing same fruit type detection system<br>• Optimized Physics2D collision processing system",
-        performanceChallenge: "• Prevented memory leak problems with Object Pooling and performed performance optimization for 60 FPS target<br>• Developed efficient fruit creation system and automatic cleanup mechanism by disabling collection check",
-        visualChallenge: "• Created color-coded fruit merge effects with Particle System integration<br>• Developed game over screen and restart functionality with modern interface design",
+        // Juicy Merge technical skills (new icon style)
+        juicyTech1: "Established memory management system with Unity ObjectPool and developed enum-based type system.",
+        juicyTech2: "Created game infrastructure with Rigidbody2D physics, collision detection and singleton pattern implementation.",
         
-        // Juicy Merge process
-        conceptProcess: "• Performed detailed analysis of original Fruit Merge game and designed 12 fruit type enum<br>• Created project infrastructure with Physics2D material system planning, Object Pooling architecture and Singleton pattern implementation",
-        coreProcess: "• Established FruitSpawner singleton structure and developed ObjectPool implementation and collision detection system<br>• Completed Physics2D materials setup by creating ScoreManager, GameEnderScript and FPSDisplay components",
-        polishProcess: "• Performed 60 FPS optimization and conducted Particle System integration and interface improvement work<br>• Completed performance testing, memory leak prevention and cross-platform testing processes",
+        // Juicy Merge mobile development (new icon style)
+        juicyMobile1: "Optimized touch input processing system and prepared Physics2D materials for each fruit type.",
+        juicyMobile2: "Achieved responsive interface design with 120 FPS target for cross-platform compatibility.",
+        
+        // Juicy Merge data management (new icon style)
+        juicyData1: "Established high score persistence system with PlayerPrefs and implemented singleton pattern for FruitSpawner.",
+        juicyData2: "Provided efficient memory management with object pooling and developed automatic cleanup system.",
+        
+        // Juicy Merge challenges (new icon style)
+        juicyChallenge1: "Solved double merge issue with InstanceID control and resolved race condition problems with IsMerging flag.",
+        juicyChallenge2: "Developed same fruit type detection system and established automatic merge trigger mechanism.",
+        juicyChallenge3: "Optimized Physics2D collision processing system.",
+        juicyChallenge4: "Prevented memory leak issues with Object Pooling and performed performance optimization for 60 FPS target.",
+        juicyChallenge5: "Developed efficient fruit creation system and automatic cleanup mechanism by disabling collection check.",
+        juicyChallenge6: "Created color-coded fruit merge effects with Particle System integration.",
+        juicyChallenge7: "Developed game over screen and restart functionality with modern interface design.",
+        
+        // Juicy Merge development process (new icon style)
+        juicyProcess1: "Conducted detailed analysis of original Fruit Merge game and designed 12 fruit type enum.",
+        juicyProcess2: "Planned Physics2D material system and created project infrastructure with Object Pooling architecture and Singleton pattern implementation.",
+        juicyProcess3: "Established FruitSpawner singleton structure and developed ObjectPool implementation and collision detection system.",
+        juicyProcess4: "Created ScoreManager, GameEnderScript and FPSDisplay components and completed Physics2D materials setup.",
+        juicyProcess5: "Performed 60 FPS optimization and conducted Particle System integration and interface improvement work.",
+        juicyProcess6: "Completed performance testing, memory leak prevention and cross-platform testing processes.",
         
         // Gallery captions
         mainMenu: "Main Menu Screen",
