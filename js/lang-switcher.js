@@ -38,12 +38,11 @@ const translations = {
         viewProject: "Projeyi İncele",
         stack: "Stack",
         juicyMerge: "Juicy Merge",
-        multiplayerArena: "Multiplayer Arena",
+        stickIt: "Stick It",
         desc1: "Ketchapp'in popüler Stack oyununun klon versiyonu. Oyun mekaniklerini sıfırdan tasarlayarak kendi yorumumla yeniden inşa ettim.",
         juicyMergeDesc: "Meyveleri birleştirerek büyük meyveler oluşturduğunuz puzzle oyunu. Birleştirme mekaniklerini sıfırdan tasarladım.",
         desc3: "Unity ile geliştirilen çok oyunculu arena oyunu.",
         puzzle: "Puzzle",
-        multiplayer: "Çok Oyunculu",
         
         // About section
         aboutTitle: "Hakkımda",
@@ -234,12 +233,11 @@ const translations = {
         viewProject: "View Project",
         stack: "Stack",
         juicyMerge: "Juicy Merge",
-        multiplayerArena: "Multiplayer Arena",
+        stickIt: "Stick It",
         desc1: "A clone of Ketchapp's popular Stack game. I redesigned the game mechanics from scratch with my own interpretation.",
         juicyMergeDesc: "Puzzle game where you combine fruits to create larger fruits. I redesigned the merge mechanics from scratch.",
         desc3: "Multiplayer arena game developed with Unity.",
         puzzle: "Puzzle",
-        multiplayer: "Multiplayer",
         
         // About section
         aboutTitle: "About Me",
